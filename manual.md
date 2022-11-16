@@ -16,7 +16,7 @@
 ### 开启HttpServer
 
 1. 在mp目录下新建一个文本文件`httpserver.bat`，粘贴`java -jar xxx.jar`进去（xxx换成MiniHttpServer.jar实际文件名）
-2. 双击运行`httpserver.bat`，启动成功后复制API地址，粘贴到浏览器打开，如果一切顺利浏览器会显示1.0这个版本号
+2. 双击运行`httpserver.bat`，启动成功后复制API地址，粘贴到浏览器打开，如果一切顺利浏览器会显`FORBIDDEN: Directory is unable to show`
 3. 如果你需要从外网进行访问，把这个地址换成外网IP或者域名再访问一次，确保可以顺利访问
 
 ### 安装客户端
