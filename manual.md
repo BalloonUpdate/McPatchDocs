@@ -26,7 +26,7 @@
 3. 用压缩软件打开McPatchClient.jar，把config.yml文件解压出来，打开config.yml文件进行编辑
 4. 将服务端的API地址粘贴到config.yml中的server选项后面，然后保存关闭
 5. 双击运行McPatchClient.jar开始更新刚刚打包的第一个版本，这个过程可能会花费相当长的时间，请耐心等待
-6. 更新完成后检查一下mc-patch-client-version.txt这个文件的内容，如果是1.0或者你刚创建的版本号，就说明第一个版本更新完毕
+6. 更新完成后检查一下mc-patch-version.txt这个文件的内容，如果是1.0或者你刚创建的版本号，就说明第一个版本更新完毕（如果你要移动McPatchClient.jar的位置，请带着mc-patch-version.txt一起移动）
 7. 到此客户端配置完毕，如果希望在游戏启动时自动弹出更新，而不是每次都手点，可以参考一键启动的页面
 8. 目前一键启动仅支持：[Windows平台](javaagent-windows.md)和[Android平台](javaagent-android.md)
 9. 如果你确定config.yml已经调试完成，可以将config.yml打包回McPatchClient.jar里，然后删除外部的config.yml，程序会自动读取Jar内部的配置文件，以保持目录整洁
