@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>McPatch Docs</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <!-- <script src="assets/jsdelivr-auto-fallback.index.js"></script> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/docsify@4/lib/themes/vue.css">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/77261045?s=32&v=4" type="image/png">
+
+    <!-- Vue2 Development -->
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <!-- Edit on Github -->
+    <script src="assets/docsify-plugins/docsify-edit-on-github.js"></script>
+    <!-- Auto Title -->
+    <script src="assets/docsify-plugins/docsify-auto-title.js"></script>
+    <!-- Github Repo Contributors -->
+    <script src="assets/docsify-plugins/docsify-github-repo-contributors.js"></script>
+    
+    <script>
+        window.$docsify = {
+            // name: 'UpdaterForMinecraft',
+            repo: 'https://github.com/BalloonUpdate/McPatchDocs/',
+            auto2top: true,
+            loadNavbar: 'navbar.md',
+            // basePath: '/Docs/',
+            relativePath: true,
+            formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
+            // routerMode: 'history',
+            notFoundPage: 'README.md',
+            topMargin: 10,
+            tabs: {
+                persist    : true,
+                sync       : false,
+                theme      : 'classic',
+                tabComments: true,
+                tabHeadings: true
+            },
+            // search : {
+            //     maxAge: 1800000, //(30min) 过期时间，单位毫秒，默认一天86400000
+            //     paths: 'auto',
+            //     depth: 6,
+            //     hideOtherSidebarContent: true, // 是否隐藏其他侧边栏内容
+            //     placeholder: '搜索...',
+            //     noData: '没有结果!',
+            // },
+            plugins: [
+                EditOnGithubPlugin.create('https://github.com/BalloonUpdate/McPatchDocs/blob/main/', null, 'Edit on Github'),
+                DocsifyAutoTitle.create(),
+                DocsifyGithubRepoContributors.create()
+            ]
+        }
+    </script>
+
+    <div id="app">
+        页面正在加载...<br/>
+    </div>
+    
+    <!-- Docsify v4 -->
+    <script src="https://unpkg.com/docsify@4"></script>
+    <!-- 图片缩放 -->
+    <script src="https://unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+    <!-- 代码复制 -->
+    <script src="https://unpkg.com/docsify-copy-code"></script>
+    <!-- json高亮 -->
+    <script src="https://unpkg.com/prismjs@1.23.0/components/prism-json.min.js"></script>
+    <!-- docsify-tabs (latest v1.x.x) -->
+    <script src="https://unpkg.com/docsify-tabs@1"></script>
+    <!-- 全局搜索 -->
+    <!-- <script src="https://unpkg.com/docsify/lib/pldugins/search.min.js"></script> -->
+    <!-- 代码高亮 -->
+    <script src="https://unpkg.com/prismjs@1/components/prism-yaml.min.js"></script>
+</head>
+<body>
+    <style>
+        .tip {
+            color: #ed0e0e;
+        }
+        
+        /* .markdown-section {
+            padding-top: 8px;
+        } */
+
+        .markdown-section blockquote {
+            background: #f1f1f1;
+        }
+
+        .markdown-section > div:first-child p {
+            margin: 0 0;
+        }
+
+        details[open] {
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            padding: 8px;
+        }
+
+        details summary {
+            cursor: pointer;
+            border-radius: 4px;
+            padding: 0px 4px;
+        }
+
+        details:not([open]) summary[auto]::before {
+            content: '点击展开';
+        }
+
+        details[open] summary[auto]::before {
+            content: '收起';
+        }
+
+        details summary:hover {
+            background: #efefef;
+        }
+
+        @media(prefers-color-scheme:dark) {
+            details[open] {
+                border-color: #676767;
+            }
+
+            details summary:hover {
+                background: #3e3e3e;
+            }
+
+            .sidebar, body {
+                background-color: rgb(39, 39, 39);
+            }
+
+            body {
+                color: #c1c1c1;
+            }
+
+            /* header 123456 */
+            .anchor span {
+                color: #e2e2e2;
+            }
+
+            .sidebar {
+                border-right-color: #a9a9a912;
+            }
+
+            .sidebar,
+            .sidebar ul li a {
+                color: #c1c1c1;
+            }
+            
+            .markdown-section strong {
+                color: #c36112;
+            }
+
+            .markdown-section code, .markdown-section pre {
+                background-color: #353535;
+            }
+
+            .markdown-section p.tip, .markdown-section tr:nth-child(2n) {
+                background-color: #3c3c3c;
+            }
+
+            .markdown-section td, .markdown-section th {
+                border: 1px solid #4c4c4c;
+            }
+
+            .markdown-section p.tip, .markdown-section tr:nth-child(2n) {
+                background-color: #2d2d2d !important;
+            }
+
+            .markdown-section pre[v-pre], 
+            .markdown-section pre[v-pre] code {
+                background-color: #151515 !important;
+                /* background-color: #f14b4b !important; */
+            }
+            .markdown-section pre[v-pre] {
+                border-radius: 4px;
+            }
+
+            .markdown-section pre>code {
+                color: #b9b8b8;
+            }
+
+            .markdown-section blockquote {
+                background-color: #424242;
+                color: #cbcbcb;
+            }
+
+            .markdown-section hr {
+                border-bottom-color: #6b6b6b;
+            }
+
+            .app-nav li ul {
+                background-color: #333;
+                border-color: #636363;
+            }
+
+            .sidebar-toggle {
+                background-color: #404040cc;
+            }
+
+            .search .input-wrap input {
+                background-color: #313131;
+                color: #c1c1c1;;
+            }
+
+            .search {
+                border-bottom-color: #3c3c3c;
+            }
+        }
+
+        /* .markdown-section {
+            max-width: 960px;
+        } */
+
+        @media(max-width: 1024px) {
+            .markdown-section {
+                max-width: 95%;
+            }
+        }
+
+        /* bilibili视频 */
+        .bilibli-video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 50%;
+        }
+
+        .bilibli-video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</body>
+</html>
