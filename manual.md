@@ -5,6 +5,8 @@
 1. 在桌面新建一个目录叫mp，将McPatchManage.jar和MiniHttpServer.jar复制进去
 2. 在mp目录下新建一个文本文件manage.bat，粘贴`java -jar xxx.jar`进去（xxx换成McPatchManage.jar实际文件名）
 3. 创建workspace目录，将客户端的.minecraft目录直接复制到mp/workspace/目录下面像这样：mp/workspace/.minecraft（注意仅复制.minecraft目录，启动器文件不要复制）
+   1. 如果你打算今后只更新mods目录，不会更新其它文件，那么可以只复制`mp/workspace/.minecraft/mods`目录来缩减大小
+
 4. 复制好之后，双击运行刚创建的manage.bat文件，输入1+Enter来开始创建第一个更新包
 5. 提示要输入版本号之后，你就可以随便输入第一个版本号了，比如1.0，然后按Enter
    1. 版本号只能包括大小写字母，以及这些字符`!@#$%^&()_+-=[]{};',.`也不要出现中文或者空格
