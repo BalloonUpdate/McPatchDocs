@@ -3,8 +3,8 @@
 ### 创建第一个版本
 
 1. 在桌面新建一个目录叫mp，将McPatchManage.jar和MiniHttpServer.jar复制进去
-2. 在mp目录下新建一个文本文件`manage.bat`，粘贴`java -jar xxx.jar`进去（xxx换成McPatchManage.jar实际文件名）
-3. 打开workspace目录，将客户端的.minecraft目录直接复制到mp/workspace/目录下面像这样：mp/workspace/.minecraft（注意仅复制.minecraft目录，启动器文件不要复制）
+2. 在mp目录下新建一个文本文件manage.bat，粘贴`java -jar xxx.jar`进去（xxx换成McPatchManage.jar实际文件名）
+3. 创建workspace目录，将客户端的.minecraft目录直接复制到mp/workspace/目录下面像这样：mp/workspace/.minecraft（注意仅复制.minecraft目录，启动器文件不要复制）
 4. 复制好之后，双击运行刚创建的manage.bat文件，输入1+Enter来开始创建第一个更新包
 5. 提示要输入版本号之后，你就可以随便输入第一个版本号了，比如1.0，然后按Enter
    1. 版本号只能包括大小写字母，以及这些字符`!@#$%^&()_+-=[]{};',.`也不要出现中文或者空格
@@ -15,8 +15,8 @@
 
 ### 开启HttpServer
 
-1. 在mp目录下新建一个文本文件`httpserver.bat`，粘贴`java -jar xxx.jar`进去（xxx换成MiniHttpServer.jar实际文件名）
-2. 双击运行`httpserver.bat`，启动成功后复制API地址，粘贴到浏览器打开，如果一切顺利浏览器会显`FORBIDDEN: Directory is unable to show`
+1. 在mp目录下新建一个文本文件httpserver.bat，粘贴`java -jar xxx.jar`进去（xxx换成MiniHttpServer.jar实际文件名）
+2. 双击运行httpserver.bat，启动成功后复制API地址，粘贴到浏览器打开，如果一切顺利浏览器会显`FORBIDDEN: Directory is unable to show`
 3. 如果你需要从外网进行访问，把这个地址换成外网IP或者域名再访问一次，确保可以顺利访问
 
 ### 安装客户端
@@ -52,31 +52,31 @@
 
 ### 自由化部署
 
-如果你不想使用MiniHttpServer.jar，而是希望使用自己的方式提供HTTP文件服务，比如Nginx，Apache，网站主机，对象存储等，那么只需要复制public目录的里面的文件就好
+如果你不想使用MiniHttpServer.jar，而是希望使用自己的方式提供HTTP文件服务，比如Nginx，Apache，网站主机，对象存储等，那么只需要复制public目录的里面的文件就好，然后就可以删掉可以MiniHttpServer.jar文件了
 
 当你打出一个新的更新包之后，并不需要把所有的版本文件都复制到你的Nginx，Apache，网站主机，对象存储之类的地方上，而是只需要复制那一个版本就好
 
-比如我打了一个新版本叫10.0，那么就只用复制`10.0.mc-patch.json`和`10.0.mc-patch.bin`这两个文件，外加一个`mc-patch-versions.txt`文件到你自己的HTTP服务器空间上就好
+比如我打了一个新版本叫10.0，那么就只用复制或者上传`10.0.mc-patch.json`和`10.0.mc-patch.bin`这两个文件，外加一个`mc-patch-versions.txt`文件到你自己的HTTP服务器空间上就好
 
-同时MiniHttpServer.jar也就不是必须了，你可以直接删掉这个文件
-
-在客户端填写server选项时，填写更新包所在的目录就行（就是.json文件和.bin文件所在的目录），而非指向具体文件名
+在客户端填写server选项时，就需要填写你自己的URL，URL填写更新包所在的目录就行（就是.json文件和.bin文件所在的目录），而非指向具体文件名。具体文件名会由程序自动补全
 
 ### 版本号并非判断新旧的依据
 
-版本号不没有规定一定要往高迭代，也可以往低迭代，就是说你可以1.5版本更新到1.4版本，这都被允许的
+版本号并未规定一定要往高迭代，也可以往低迭代，就是说你可以1.5版本更新到1.4版本，这都被允许的
 
 因为版本的前后关系并不是直接判断版本号文字计算出来的，而是按照你打每个版本的时间顺序，后打的版本总是比先打的版本要新。版本号只是个标签罢了，不作为任何判断版本前后的依据
 
 ### 版本发错了怎么办
 
-版本号一旦发布就不能撤回了，因为撤回会导致文件状态混乱。你应该额外发布一个更新的版本来替代撤回以修补你的过错
+版本号一旦发布就不能撤回，撤回可能会导致客户端某些文件更新永久更新失败，而且这种问题很难发现和调试。你应该额外再发布一个版本来替代撤回
 
-### 调试时从头来过
+如果你100%确定刚发布的错误版本没有任何人下载的话，可以使用以下方法来撤回：
 
-你可以在主菜单输入ch+Enter来进入隐藏的清理菜单，可以将history目录和public目录清空，方便你重头开始打包版本更新
-
-这个功能使用起来必须十分小心，一般只建议在调试时使用。注意使用此命令前请三思，如使用不当可能会误删重要文件
+1. 打开public/mc-patch-versions.txt文件，将错误的版本那一行删除掉（其它行千万别改动）
+2. 删除public目录下，错误的版本号的json文件和bin文件
+3. 运行管理端，在主菜单输入bv+Enter进入隐藏的回溯菜单，回溯workspace目录和history目录的内容
+4. 这样就回退到了你发布错误版本号之前的状态了
+5. 如果你不能100%保证没有任何人下载过这个错误的版本，就不要撤回版本，否则那个人会出现各种各样的奇奇怪怪的问题
 
 ### 不小心修改了history目录
 
