@@ -1,16 +1,27 @@
 ## Android平台一键启动
 
-教程这里以澪作为示例，其它启动器大同小异
+教程这里以澪和HMCLPE作为示例
 
 1. 首先确保McPatchClient在电脑上双击启动没问题
-2. 将McPatchClient.jar和配置文件（如果有）一起复制到`/sdcard/MioLauncher/xxx.jar`目录下（`xxx`是McPatchClient.jar的实际文件名）
-3. 打开澪，切换到`游戏配置`页面，在游戏参数的最前面插入一段JVM参数`-javaagent:/sdcard/MioLauncher/xxx.jar`（`xxx`换成将McPatchClient的实际的文件名）
-4. 点击保存按钮，然后重启澪
-5. 启动游戏测试效果。如果你要看McPatchClient的工作过程，可以打开澪的日志窗口
+2. 将McPatchClient.jar和配置文件config.yml（如果有）一起复制到游戏目录下，所谓游戏目录就是指.minecraft目录，无论何时，McPatchClient.jar和config.yml都需要放到.minecraft里面，注意是里面不是旁边
+   1. 澪的默认路径：`/sdcard/MioLauncher/.minecraft`
+   2. HMCLPE的默认路径：`/sdcard/HMCLPE/.minecraft`
+
+3. 配置启动参数
+   1. 澪：切换到`游戏配置`页面，在游戏参数（JVM参数）的最前面插入一段内容`-javaagent:/sdcard/MioLauncher/xxx.jar`（`xxx`换成将McPatchClient.jar的实际的文件名）接着点击保存按钮，然后重启澪
+   2. HMCLPE：切换到`版本列表`，修改全局游戏设置或者特点版本设置，在Java虚拟机参数的最前面插入一段内容`-javaagent:xxx.jar`（`xxx`换成将McPatchClient.jar的实际的文件名），然后点击房子按钮回到主界面
+
+4. 启动游戏测试效果
+   1. 澪：请打开日志窗口观察McPatchClient是否运行成功
+   2. HMCLPE：截止到撰写教程时未能成功打开日志窗口，只能手动查看HMCLPE的日志文件`/sdcard/Android/data/com.tungsten.hmclpe/files/debug/boat_latest_log.txt`
+
+5. 如果游戏启动后马上闪退，请翻阅日志末尾判断是否是参数配置不正确或者其它原因
+6. 如果日志只有短短几行，且有出现这样的内容：`Error opening zip file or JAR manifest missing : McPatchClient-1.0.1.jar`说明启动参数配置不正确，McPatchClient.jar这个文件找不到，请检查是否放到了.minecraft目录下面。如果此时你开启了版本隔离，请向我反馈这个问题
+7. 如果每一行日志信息的开头都有\[McPatchClient\]的字样，说明此次崩溃是由McPatchClient引起的，这种情况去翻阅常见问题解答就可以解决，如果是其它复杂的情况，请向我报告这个问题
 
 ## 优化小提示
 
-Android平台通常使用ARM处理器和LPDDR内存，无论是处理器功耗还是内存带宽都相当有限，所以请尽量控制每次客户端体积大小。不要给游戏加载体积特别大的模组（尤指大小超过100Mb以上），不仅会导致更新过程变长，也会影响Minecraft游戏的启动速度
+Android平台通常使用ARM处理器和LPDDR内存，无论是处理器功耗还是内存带宽都相当有限，所以请尽量控制每次客户端体积大小。不要给游戏加载体积特别大的模组（尤指大小超过50Mb以上），不仅会导致更新过程变长，也会影响Minecraft游戏的启动速度
 
 ## 游戏闪退崩溃
 
