@@ -4,17 +4,21 @@
 
 1. 在桌面新建一个目录叫mp，将McPatchManage.jar和MiniHttpServer.jar复制进去
 2. 在mp目录下新建一个文本文件manage.bat，粘贴`java -jar xxx.jar`进去（xxx换成McPatchManage.jar实际文件名）
-3. 创建workspace目录，将客户端的.minecraft目录直接复制到mp/workspace/目录下面像这样：mp/workspace/.minecraft（注意仅复制.minecraft目录，启动器文件不要复制）
-   1. 如果你打算今后只更新mods目录，不会更新其它文件，那么可以只复制`mp/workspace/.minecraft/mods`目录来缩减大小
-4. 复制好之后，双击运行刚创建的manage.bat文件，输入1+Enter来开始创建第一个更新包
+3. 创建workspace目录，将你的客户端文件夹里面要加入更新的目录们都复制过来，以下是一些例子
+   1. 要更新模组，复制.minecraft/mods目录到mp/workspace/.minecraft/mods
+   2. 要更新资源包，复制.minecraft/resourcepacks目录到mp/workspace/.minecraft/resourcepacks
+   3. 要更新.minecraft目录旁边的“新玩家进服教程.txt”，复制“新玩家进服教程.txt”到mp/workspace/新玩家进服教程.txt
+   4. 如果你开了版本隔离，就需要复制.minecraft/versions/your-version/mods到mp/workspace/.minecraft/versions/your-version/mods。其它文件以此类推，照葫芦画瓢即可
+   5. 如果你想只给初始客户端zip包里打包一个启动器和McPatchClient，然后通过更新的方式热下载整个.minecraft这个目录，以此来缩减首包大小，那么就需要直接把整个.minecraft目录复制进mp/workspace/.minecraft里
+4. 复制好之后，双击运行刚创建的manage.bat文件，输入`1`来开始创建第一个更新包
 5. 提示要输入版本号之后，你就可以随便输入第一个版本号了，比如1.0，然后按Enter
-   1. 版本号只能包括大小写字母，以及这些字符`!@#$%^&()_+-=[]{};',.`也不要出现中文或者空格
+   1. 版本号只能包括大小写字母数字，以及`!@#$%^&()_+-=[]{};',.`不要出现中文或者空格
 6. 然后程序会列出你对哪些文件做了更改。因为我们是第一次打更新包，文件数量可能较多，粗略看一下就好
 7. 如果你需要写一些更新记录以在玩家更新此版本时弹出提示框的话，可以在此时打开changelogs.txt文件粘贴进去并保存
-8. 一切妥当之后，输入y+Enter开始打包。首次打包内容较大，可能会花费相当多的时间，请耐心等待
+8. 一切妥当之后，输入`y`开始打包。首次打包内容较大，可能会花费相当多的时间，请耐心等待
 9. 待到出现“创建版本完成”的字样后，就说明打包成功了（更新包文件会保存在public目录下）
 
-### 开启HttpServer
+### 开启自带的HttpServer
 
 1. 在mp目录下新建一个文本文件httpserver.bat，粘贴`java -jar xxx.jar`进去（xxx换成MiniHttpServer.jar实际文件名）
 2. 双击运行httpserver.bat，启动成功后复制API地址，粘贴到浏览器打开，如果一切顺利浏览器会显`FORBIDDEN: Directory is unable to show`
@@ -39,7 +43,7 @@
 2. 比如我想要删除客户端的一个模组a.jar再添加一个新的模组b.jar，那么只需要在workspace目录下删掉a.jar然后复制进去b.jar，接着打包新版本就好
 3. 如果新旧文件同名，但文件内容被修改了也只一样的做法：直接覆盖旧文件就好，程序也能自动检测到
 4. 对目录的新建和删除也是一样，该怎么新建怎么新建，该什么删除怎么删除，就和对“本地文件”进行这些操作一样
-5. 如果你在workspace目录改了一些文件，但又觉得不妥，想要丢弃这些修改，可以启动管理端McPatchManage.jar，输入4+Enter来还原
+5. 如果你在workspace目录改了一些文件，但又觉得不妥，想要丢弃这些修改，可以启动管理端McPatchManage.jar，输入`4`来还原
 
 ## 一些使用小提示
 
@@ -78,10 +82,10 @@
 1. 打开public/mc-patch-versions.txt文件，将错误的版本那一行删除掉（其它行千万别改动）
 2. 注意撤回不要只撤回中间的版本，应该连带撤回后续所有的新版本，比如现在有“甲乙丙丁戊”五个版本，如果“丙”版本需要撤回，应该连带“丙丁戊”一起撤回
 3. 删除public目录下，错误的版本号的json文件和bin文件（同样连带后续所有版本）
-4. 运行管理端，在主菜单输入bv+Enter进入隐藏的回溯菜单，回溯workspace目录和history目录的内容
+4. 运行管理端，在主菜单输入`bv`进入隐藏的回溯菜单，回溯workspace目录和history目录的内容
 5. 这样就回退到了你发布错误版本号之前的状态了
 6. 如果你不能100%保证没有任何人下载过这个错误的版本，就不要撤回版本，否则那个人会出现各种各样的奇奇怪怪的问题
 
 ### 不小心修改了history目录
 
-如果你不小心修改了history目录下的内容，可以在主菜单输入bv+Enter进入隐藏的回溯菜单来同时还原workspace目录和history目录，注意使用此命令前请三思，如使用不当可能会误删重要文件
+如果你不小心修改了history目录下的内容，可以在主菜单输入`bv`进入隐藏的回溯菜单来同时还原workspace目录和history目录，注意使用此命令前请三思，如使用不当可能会误删重要文件
