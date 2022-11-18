@@ -12,13 +12,9 @@
 
                 let vue = new (Vue.extend(githubContributors))().$mount('#github-contributors')
                 let repos = [
-                    'https://api.github.com/repos/balloonupdate/Docs/contributors',
-                    'https://api.github.com/repos/balloonupdate/Tool/contributors',
-                    'https://api.github.com/repos/balloonupdate/JarClient/contributors',
-                    'https://api.github.com/repos/balloonupdate/LittleServer/contributors',
-                    'https://api.github.com/repos/balloonupdate/ExeClient/contributors',
-                    'https://api.github.com/repos/balloonupdate/ModClient/contributors',
-                    'https://api.github.com/repos/balloonupdate/BalloonServer/contributors',
+                    'https://api.github.com/repos/balloonupdate/McPatchDocs/contributors',
+                    'https://api.github.com/repos/balloonupdate/McPatchClient/contributors',
+                    'https://api.github.com/repos/balloonupdate/McPatchManage/contributors'
                 ]
 
                 vue.contributors = []
