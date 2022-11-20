@@ -27,3 +27,9 @@ McPatch是一个Minecraft服务器客户端更新程序，管理端和客户端�
 
 如果想了解McPatch的技术细节，请点击[这里](technical-details.md)
 
+## 开源仓库
+
+1. 管理端：[BalloonUpdate/McPatchManage](https://github.com/BalloonUpdate/McPatchManage)
+2. 客户端：[BalloonUpdate/McPatchClient](https://github.com/BalloonUpdate/McPatchClient)
+3. 服务端：[BalloonUpdate/MiniHttpServer](https://github.com/BalloonUpdate/MiniHttpServer)
+4. 文档站：[BalloonUpdate/McPatchDocs](https://github.com/BalloonUpdate/McPatchDocs)
