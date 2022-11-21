@@ -20,6 +20,7 @@
     <script src="assets/docsify-plugins/docsify-auto-title.js"></script>
     <!-- Github Repo Contributors -->
     <script src="assets/docsify-plugins/docsify-github-repo-contributors.js"></script>
+    <script src="assets/docsify-plugins/docsify-first-text.js"></script>
     
     <script>
         window.$docsify = {
@@ -51,7 +52,8 @@
             plugins: [
                 EditOnGithubPlugin.create('https://github.com/BalloonUpdate/McPatchDocs/blob/main/', null, 'Edit on Github'),
                 DocsifyAutoTitle.create(),
-                DocsifyGithubRepoContributors.create()
+                DocsifyGithubRepoContributors.create(),
+                DocsifyFirstText.create(),
             ]
         }
     </script>
