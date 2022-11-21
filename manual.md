@@ -33,6 +33,7 @@
 5. 双击运行McPatchClient.jar开始更新刚刚打包的第一个版本，这个过程可能会花费相当长的时间，请耐心等待
 6. 更新完成后检查一下mc-patch-version.txt这个文件的内容，如果是1.0或者你刚创建的版本号，就说明第一个版本更新完毕
    1. 如果你要移动McPatchClient.jar的位置，请带着mc-patch-version.txt一起移动
+   2. McPatchClient.jar的位置并不会影响更新的起始路径，因为客户端程序会自动搜索.minecraft目录的父目录作为更新起始路径，所以McPatchClient.jar无论放在哪个子目录下面运行都不会影响更新结果
 7. 到此客户端配置完毕，如果希望在游戏启动时自动弹出更新，而不是每次都手点，可以参考一键启动的页面
 8. 目前一键启动仅支持：[Windows平台](javaagent-windows.md)和[Android平台](javaagent-android.md)
 9. 如果你确定config.yml已经调试完成，可以将config.yml打包回McPatchClient.jar里，然后删除外部的config.yml，程序会自动读取Jar内部的配置文件，以保持目录整洁
