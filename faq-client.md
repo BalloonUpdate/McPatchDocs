@@ -10,6 +10,21 @@
 
 `解决方法`：在配置文件里把主题禁用即可`disable-theme: true`
 
+### Error opening zip file or JAR Manifest missing
+
+```
+Error occurred during initialization of VM
+agent library failed to init: instrument
+
+Error opening zip file or JAR Manifest missing: McPatchClient.jar
+```
+
+`影响范围`：客户端全版本
+
+`问题原因`：一键启动参数设置有误，找不到McPatchClient.jar文件
+
+`解决方法`：检查JVM参数是否设置正确，McPatchClient.jar是否放到了正确位置
+
 ### 连接中断
 
 `影响范围`：客户端全版本
