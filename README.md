@@ -24,6 +24,7 @@ McPatch是一个Minecraft服务器客户端更新程序，管理端和客户端�
 + [管理端常见问题解答](faq-manage.md)
 + [Windows平台一键启动教程](javaagent-windows.md)
 + [Android平台一键启动教程](javaagent-android.md)
++ [模组形式一键启动](modclient-all-platform.md)
 
 如果想了解McPatch的技术细节，请点击[这里](technical-details.md)
 

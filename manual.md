@@ -1,50 +1,70 @@
 ## 安装教程
 
-### 创建第一个版本
+### -1.重要说明
 
-1. 在桌面新建一个目录叫mp，将McPatchManage.jar和MiniHttpServer.jar复制进去
-2. 在mp目录下新建一个文本文件manage.bat，粘贴`java -jar xxx.jar`进去（xxx换成McPatchManage.jar实际文件名）
-3. 创建workspace目录，将你的客户端文件夹里面要加入更新的目录们都复制过来，以下是一些例子
-   1. 要更新模组，复制.minecraft/mods目录到mp/workspace/.minecraft/mods
-   2. 要更新资源包，复制.minecraft/resourcepacks目录到mp/workspace/.minecraft/resourcepacks
-   3. 要更新.minecraft目录旁边的“新玩家进服教程.txt”，复制“新玩家进服教程.txt”到mp/workspace/新玩家进服教程.txt
-   4. 如果你开了版本隔离，就需要复制.minecraft/versions/your-version/mods到mp/workspace/.minecraft/versions/your-version/mods。其它文件以此类推，照葫芦画瓢即可
-   5. 如果你想只给初始客户端zip包里打包一个启动器和McPatchClient，然后通过更新的方式热下载整个.minecraft这个目录，以此来缩减首包大小，那么就需要直接把整个.minecraft目录复制进mp/workspace/.minecraft里
-4. 复制好之后，双击运行刚创建的manage.bat文件，输入`1`来开始创建第一个更新包
-5. 提示要输入版本号之后，你就可以随便输入第一个版本号了，比如1.0，然后按Enter
-   1. 版本号只能包括大小写字母数字，以及`!@#$%^&()_+-=[]{};',.`不要出现中文或者空格
-6. 然后程序会列出你对哪些文件做了更改。因为我们是第一次打更新包，文件数量可能较多，粗略看一下就好
-7. 如果你需要写一些更新记录以在玩家更新此版本时弹出提示框的话，可以在此时打开changelogs.txt文件粘贴进去并保存
-8. 一切妥当之后，输入`y`开始打包。首次打包内容较大，可能会花费相当多的时间，请耐心等待
-9. 待到出现“创建版本完成”的字样后，就说明打包成功了（更新包文件会保存在public目录下）
+!> 无论什么时候，遇到问题请首先查阅常见问题解答，这些页面能解决你遇到的90%的问题！
 
-### 开启自带的HttpServer
++ [客户端常见问题解答](faq-client.md)
++ [管理端常见问题解答](faq-manage.md)
 
-1. 在mp目录下新建一个文本文件httpserver.bat，粘贴`java -jar xxx.jar`进去（xxx换成MiniHttpServer.jar实际文件名）
-2. 双击运行httpserver.bat，启动成功后复制API地址，粘贴到浏览器打开，如果一切顺利浏览器会显`FORBIDDEN: Directory is unable to show`
-3. 如果你需要从外网进行访问，把这个地址换成外网IP或者域名再访问一次，确保可以顺利访问
+### 0.准备工作
 
-### 安装客户端
+1. 在桌面新建一个目录叫mp，打开mp目录
+2. 把McPatchManage.jar和MiniHttpServer.jar复制进去
+3. 新建manage.bat，粘贴`java -jar xxx.jar`进去（xxx换成McPatchManage.jar实际文件名）
+4. 新建httpserver.bat，粘贴`java -jar xxx.jar`进去（xxx换成MiniHttpServer.jar实际文件名）
+5. 新建一个目录workspace
+
+### 1.创建第一个更新包
+
+首先把要加入更新的文件复制到workspace里来，这是一些栗子
+
++ 要更新模组，复制.minecraft/mods目录到mp/workspace/.minecraft/mods
++ 要更新资源包，复制.minecraft/resourcepacks目录到mp/workspace/.minecraft/resourcepacks
++ 要更新.minecraft目录旁边的“新玩家进服教程.txt”，复制“新玩家进服教程.txt”到mp/workspace/新玩家进服教程.txt
++ 如果你开了版本隔离，就需要复制.minecraft/versions/your-version/mods到mp/workspace/.minecraft/versions/your-version/mods。其它文件以此类推，照葫芦画瓢即可
+
+然后运行manage.bat，输入`1`来开始创建第一个更新包。第一个版本号通常输入1.0，当然你也可以输入其它内容，好了之后按Enter
+
+>  注意：版本号只能包括大小写字母数字，以及`!@#$%^&()_+-=[]{};',.`切勿使用中文或者空格
+
+然后程序会列出你对哪些文件做了更改。因为我们是第一次打更新包，文件数量可能较多，粗略看一下就好
+
+如果你要对这个版本写更新记录的话，可以在此时打开changelogs.txt文件粘贴进去并保存
+
+一切妥当之后，输入`y`开始打包。首次打包内容较大，可能会花费相当多的时间，请耐心等待
+
+待到出现“创建版本完成”的字样后，就说明打包成功了（更新包文件会保存在public目录下）
+
+### 2.开启自带的HttpServer
+
+1. 双击运行httpserver.bat，启动成功后复制API地址，粘贴到浏览器打开，如果一切顺利浏览器会显`FORBIDDEN: Directory is unable to show`
+2. 如果你需要从外网进行访问，把这个地址换成外网IP或者域名再访问一次，确保可以顺利访问
+
+### 3.安装客户端
 
 1. 复制一份你的服务器客户端文件夹到桌面上，并打开这个目录
 2. 把McPatchClient.jar复制到.minecraft目录的旁边
-3. 用压缩软件打开McPatchClient.jar，把config.yml文件解压出来，打开config.yml文件进行编辑
+3. 用压缩软件打开McPatchClient.jar，把config.yml解压出来，打开config.yml文件进行编辑
 4. 将服务端的API地址粘贴到config.yml中的server选项后面，然后保存关闭
-5. 双击运行McPatchClient.jar开始更新刚刚打包的第一个版本，这个过程可能会花费相当长的时间，请耐心等待
-6. 更新完成后检查一下mc-patch-version.txt这个文件的内容，如果是1.0或者你刚创建的版本号，就说明第一个版本更新完毕
-   1. 如果你要移动McPatchClient.jar的位置，请带着mc-patch-version.txt一起移动
-   2. McPatchClient.jar的位置并不会影响更新的起始路径，因为客户端程序会自动搜索.minecraft目录的父目录作为更新起始路径，所以McPatchClient.jar无论放在哪个子目录下面运行都不会影响更新结果
+5. 双击运行McPatchClient.jar开始更新刚刚打包的第一个版本
+6. 更新完成后检查一下mc-patch-version.txt这个文件的内容，确保是1.0或者你刚创建的版本号
+
+> 如果你要移动McPatchClient.jar的位置，请带着mc-patch-version.txt一起移动
+
 7. 到此客户端配置完毕，如果希望在游戏启动时自动弹出更新，而不是每次都手点，可以参考一键启动的页面
-8. 目前一键启动仅支持：[Windows平台](javaagent-windows.md)和[Android平台](javaagent-android.md)
+8. 目前一键启动仅支持：[Windows平台](javaagent-windows.md)和[Android平台](javaagent-android.md)。如果你安装了猫反作弊模组，请转而使用[模组形式一键启动](modclient-all-platform.md)（支持所有平台）
 9. 如果你确定config.yml已经调试完成，可以将config.yml打包回McPatchClient.jar里，然后删除外部的config.yml，程序会自动读取Jar内部的配置文件，以保持目录整洁
 
-### 后续发布新版
+> McPatchClient.jar的位置并不会影响更新到哪个路径，所以McPatchClient.jar无论放在哪个子目录下面运行都不会影响更新结果
 
-1. 后续发布新版本很简单，只需要对workspace目录下的文件做修改，然后打出更新包就行，非常简单
+### 4.后续发布新版
+
+1. 后续发布新版本很简单，只需要对workspace目录下的文件做修改（就像对本地文件一样修改就好），然后打出更新包，非常简单
 2. 比如我想要删除客户端的一个模组a.jar再添加一个新的模组b.jar，那么只需要在workspace目录下删掉a.jar然后复制进去b.jar，接着打包新版本就好
 3. 如果新旧文件同名，但文件内容被修改了也只一样的做法：直接覆盖旧文件就好，程序也能自动检测到
-4. 对目录的新建和删除也是一样，该怎么新建怎么新建，该什么删除怎么删除，就和对“本地文件”进行这些操作一样
-5. 如果你在workspace目录改了一些文件，但又觉得不妥，想要丢弃这些修改，可以启动管理端McPatchManage.jar，输入`4`来还原
+4. 对目录的新建和删除也是一样，该怎么新建怎么新建，该什么删除怎么删除，就就像对本地文件一样进行这些操作一样
+5. 如果你在workspace目录改了一些文件，但又觉得不妥，想要丢弃这些修改，可以启动管理端，输入`4`来还原
 
 ## 一些使用小提示
 
@@ -65,8 +85,8 @@
 以对象存储为例，你每打一个新版本，比如10.0，就需要将public目录里面的这三个文件上传到对象存储上：
 
 1. 二进制数据文件(.bin)：`10.0.mc-patch.json`
-2. 元数据文件(.json)：`10.0.mc-patch.bin`（如果有）
-3. 版本列表文件(mc-patch-versions.txt)：此文件每次都需要更新，至于为什么，亲自打开这个文件看看就会有答案
+2. 元数据文件(.json)：`10.0.mc-patch.bin`（如果这个文件不存在就不用上传）
+3. 版本列表文件(mc-patch-versions.txt)：此文件每次都需要上传
 
 然后，客户端server选项要这样填写：
 
