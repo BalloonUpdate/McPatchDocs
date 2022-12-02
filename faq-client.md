@@ -25,6 +25,14 @@ Error opening zip file or JAR Manifest missing: McPatchClient.jar
 
 `解决方法`：检查JVM参数是否设置正确，McPatchClient.jar是否放到了正确位置
 
+### JavaAgent一键启动时下载限速问题
+
+`影响范围`：客户端全版本
+
+`问题原因`：问题源头目前未知。但能断定和开启HTTPS有关
+
+`解决方法`：使用HTTP协议而非HTTPS协议可以解决下载限速的问题，或者使用SFTP源
+
 ### 连接中断
 
 `影响范围`：客户端全版本
