@@ -1,64 +1,65 @@
 ## 安装教程
 
-### -1.重要说明
+### -1.看常见问题解答
 
-!> 无论什么时候，遇到问题请首先查阅常见问题解答，这些页面能解决你遇到的90%的问题！
+!> 这里收录了所有报错信息和对应的解决方法，记得过来看看！
 
-+ [客户端常见问题解答](faq-client.md)、[客户端常见问题解答](faq-client.md)、[客户端常见问题解答](faq-client.md)
-+ [管理端常见问题解答](faq-manage.md)、[管理端常见问题解答](faq-manage.md)、[管理端常见问题解答](faq-manage.md)
++ [客户端常见问题解答](faq-client.md)
++ [管理端常见问题解答](faq-manage.md)
 
 ### 0.准备工作
 
-1. 在桌面新建一个目录叫mp，并打开mp目录
-2. 把McPatchManage.jar和MiniHttpServer.jar复制进去
-3. 新建manage.bat，粘贴`java -jar xxx.jar & pause`（xxx换成McPatchManage.jar实际文件名）
-4. 新建httpserver.bat，粘贴`java -jar xxx.jar & pause`（xxx换成MiniHttpServer.jar实际文件名）
-5. 新建一个目录workspace
+1. 在桌面新建一个目录叫`mp`，并打开这个目录
+2. 把`McPatchManage.jar`和`MiniHttpServer.jar`复制进去
+3. 新建`manage.bat`，粘贴`java -jar xxx.jar & pause`（xxx换成McPatchManage.jar实际文件名）
+4. 新建`httpserver.bat`，粘贴`java -jar xxx.jar & pause`（xxx换成MiniHttpServer.jar实际文件名）
+5. 新建一个目录`workspace`
 
 ### 1.创建第一个更新包
 
-首先把要加入更新的文件复制到workspace里来，这是一些栗子
+首先把要加入更新的文件复制到`workspace`里来，这是一些栗子
 
-+ 要更新模组，复制.minecraft/mods目录到mp/workspace/.minecraft/mods
-+ 要更新资源包，复制.minecraft/resourcepacks目录到mp/workspace/.minecraft/resourcepacks
-+ 要更新.minecraft目录旁边的“新玩家进服教程.txt”，复制“新玩家进服教程.txt”到mp/workspace/新玩家进服教程.txt
-+ 如果你开了版本隔离，就需要复制.minecraft/versions/your-version/mods到mp/workspace/.minecraft/versions/your-version/mods。其它文件以此类推，照葫芦画瓢即可
++ 要更新模组，复制`.minecraft/mods`目录到`mp/workspace/.minecraft/mods`
++ 要更新资源包，复制`.minecraft/resourcepacks`目录到`mp/workspace/.minecraft/resourcepacks`
++ 要更新.minecraft目录旁边的`新玩家进服教程.txt`，复制`新玩家进服教程.txt`文件到`mp/workspace/新玩家进服教程.txt`
++ 如果你开了版本隔离，就需要复制`.minecraft/versions/your-version/mods`目录到`mp/workspace/.minecraft/versions/your-version/mods`
++ 其它文件以此类推，照葫芦画瓢即可。只复制要更新的文件，不更新的文件暂时不用复制
 
 然后运行manage.bat，输入`1`来开始创建第一个更新包。第一个版本号通常输入1.0，当然你也可以输入其它内容，好了之后按Enter
 
->  注意：版本号只能包括大小写字母数字，以及`!@#$%^&()_+-=[]{};',.`切勿使用中文或者空格
+>  注意：版本号只能包括大小写字母数字，以及`!@#$()_+-=;',.`切勿使用中文或者空格
 
 然后程序会列出你对哪些文件做了更改。因为我们是第一次打更新包，文件数量可能较多，粗略看一下就好
 
-如果你要对这个版本写更新记录的话，可以在此时打开changelogs.txt文件粘贴进去并保存
+如果你要对这个版本写更新记录的话，可以在此时打开`changelogs.txt`文件粘贴进去并保存
 
 一切妥当之后，输入`y`开始打包。首次打包内容较大，可能会花费相当多的时间，请耐心等待
 
 待到出现“创建版本完成”的字样后，就说明打包成功了（更新包文件会保存在public目录下）
 
-!> 注意：已发布的版本切勿手动删除，会导致后续更新全部出错！！！如需撤回版本请阅读[版本发错了怎么办](#版本发错了怎么办)
+!> 注意：已发布的版本切勿手动删除，会导致后续更新全部出错！如需撤回版本请阅读[版本发错了怎么办](#版本发错了怎么办)
 
 ### 2.开启自带的HttpServer
 
 1. 双击运行httpserver.bat，启动成功后复制API地址，粘贴到浏览器打开，如果一切顺利浏览器会显`FORBIDDEN: Directory is unable to show`
-2. 如果你需要从外网进行访问，把这个地址换成外网IP或者域名再访问一次，确保可以顺利访问
+2. 如果你需要从外网进行访问，把这个地址换成外网IP或者域名再访问一次，确保从外网访问没问题
 
 ### 3.安装客户端
 
 1. 复制一份你的服务器客户端文件夹到桌面上，并打开这个目录
 2. 把McPatchClient.jar复制到.minecraft目录的旁边
-3. 用压缩软件打开McPatchClient.jar，把config.yml解压出来，打开config.yml文件进行编辑
-4. 将服务端的API地址粘贴到config.yml中的server选项后面，然后保存关闭
+3. 用压缩软件打开McPatchClient.jar，把`config.yml`解压出来，并打开编辑
+4. 将服务端的API地址粘贴到config.yml中的`server`选项后面，然后保存关闭
 5. 双击运行McPatchClient.jar开始更新刚刚打包的第一个版本
-6. 更新完成后检查一下mc-patch-version.txt这个文件的内容，确保是1.0或者你刚创建的版本号
+6. 更新完成后检查一下`mc-patch-version.txt`这个文件的内容，确保是`1.0`或者你刚创建的版本号
 
-> 如果你要移动McPatchClient.jar的位置，请带着mc-patch-version.txt一起移动
+> 移动McPatchClient.jar位置时，需要带着`mc-patch-version.txt`和`config.yml`一起移动
 
 7. 到此客户端配置完毕，如果希望在游戏启动时自动弹出更新，而不是每次都手点，可以参考一键启动的页面
 8. 目前一键启动仅支持：[Windows平台](javaagent-windows.md)和[Android平台](javaagent-android.md)。如果你安装了猫反作弊模组，请转而使用[模组形式一键启动](modclient-all-platform.md)（支持所有平台）
-9. 如果你确定config.yml已经调试完成，可以将config.yml打包回McPatchClient.jar里，然后删除外部的config.yml，程序会自动读取Jar内部的配置文件，以保持目录整洁
+9. 如果你确定config.yml已经调试完成，可以把这个文件打包回McPatchClient.jar里，然后删除外部的config.yml，程序会自动读取Jar内部的配置文件，以保持目录整洁
 
-> McPatchClient.jar的位置并不会影响更新到哪个路径，所以McPatchClient.jar无论放在哪个子目录下面运行都不会影响更新结果
+> 因为有自动扫描功能的存在，McPatchClient.jar的位置并不会影响更新到哪个路径，所以McPatchClient.jar无论放在哪个子目录下面运行都不会影响更新结果
 
 ### 4.后续发布新版
 
@@ -86,8 +87,8 @@
 
 以对象存储为例，你每打一个新版本，比如10.0，就需要将public目录里面的这三个文件上传到对象存储上：
 
-1. 二进制数据文件(.bin)：`10.0.mc-patch.json`
-2. 元数据文件(.json)：`10.0.mc-patch.bin`（如果这个文件不存在就不用上传）
+1. 二进制数据文件(.bin)：`10.0.mc-patch.json`（如果这个文件不存在就不用上传）
+2. 元数据文件(.json)：`10.0.mc-patch.bin`
 3. 版本列表文件(mc-patch-versions.txt)：此文件每次都需要上传
 
 然后，客户端server选项要这样填写：
@@ -98,7 +99,7 @@
 
 ### 版本号并非判断新旧的依据
 
-版本号并没有规定一定要往高走，也可以往低走。就是说你可以从1.5版本更新到1.4版本。这算更新，并不算回退
+版本号并没有规定一定要往高走，也可以往低走。就是说你可以从1.5版本更新到1.4版本。这算更新而非回退
 
 因为版本的前后关系并不是直接判断版本号文字计算出来的，而是按照你打每个版本的时间顺序，后打的版本总是比先打的版本要新。版本号只是个标签罢了，不作为任何判断版本前后的依据
 
@@ -110,13 +111,15 @@
 
 如果你100%确定刚发布的错误版本没有任何人下载的话，可以使用以下方法来撤回：
 
-1. 打开public/mc-patch-versions.txt文件，将错误的版本那一行删除掉（其它行千万别改动）
-2. 注意撤回不要只撤回中间的版本，应该连带撤回后续所有的新版本，比如现在有“甲乙丙丁戊”五个版本，如果“丙”版本需要撤回，应该连带“丙丁戊”一起撤回
-3. 删除public目录下，错误的版本号的json文件和bin文件（同样连带后续所有版本）
-4. 运行管理端，在主菜单输入`bv`进入隐藏的回溯菜单，回溯workspace目录和history目录的内容
+1. 打开public/mc-patch-versions.txt文件，将错误版本那一行连带后面所有的行都删除掉（前面的千万别改动）
+2. 比如123456这6个版本中，4出了问题，就要撤回456三个版本，就在`mc-patch-versions.txt`里删除456这三行，使3这一行成为文件末尾
+3. 接着删除public目录下456这三个版本对应的json文件和bin文件
+4. 最后运行管理端，在主菜单输入`bv`进入隐藏菜单，恢复workspace目录和history目录的内容。恢复所需的时间和已有版本的数量成正比，如果版本非常多，过程可能会非常慢
 5. 这样就回退到了你发布错误版本号之前的状态了
 6. 如果你不能100%保证没有任何人下载过这个错误的版本，就不要撤回版本，否则那个人会出现各种各样的奇奇怪怪的问题
 
 ### 不小心修改了history目录
 
-如果你不小心修改了history目录下的内容，可以在主菜单输入`bv`进入隐藏的回溯菜单来同时还原workspace目录和history目录，注意使用此命令前请三思，如使用不当可能会误删重要文件
+如果你不小心修改了history目录下的内容，可以在主菜单输入`bv`进入隐藏菜单来同时还原workspace目录和history目录，注意使用此命令前请三思，如使用不当可能会误删重要文件
+
+恢复所需的时间和已有版本的数量成正比，如果版本非常多，过程可能会非常慢
