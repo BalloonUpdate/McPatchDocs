@@ -4,15 +4,15 @@
 
 !> 无论什么时候，遇到问题请首先查阅常见问题解答，这些页面能解决你遇到的90%的问题！
 
-+ [客户端常见问题解答](faq-client.md)
-+ [管理端常见问题解答](faq-manage.md)
++ [客户端常见问题解答](faq-client.md)、[客户端常见问题解答](faq-client.md)、[客户端常见问题解答](faq-client.md)
++ [管理端常见问题解答](faq-manage.md)、[管理端常见问题解答](faq-manage.md)、[管理端常见问题解答](faq-manage.md)
 
 ### 0.准备工作
 
-1. 在桌面新建一个目录叫mp，打开mp目录
+1. 在桌面新建一个目录叫mp，并打开mp目录
 2. 把McPatchManage.jar和MiniHttpServer.jar复制进去
-3. 新建manage.bat，粘贴`java -jar xxx.jar`进去（xxx换成McPatchManage.jar实际文件名）
-4. 新建httpserver.bat，粘贴`java -jar xxx.jar`进去（xxx换成MiniHttpServer.jar实际文件名）
+3. 新建manage.bat，粘贴`java -jar xxx.jar & pause`（xxx换成McPatchManage.jar实际文件名）
+4. 新建httpserver.bat，粘贴`java -jar xxx.jar & pause`（xxx换成MiniHttpServer.jar实际文件名）
 5. 新建一个目录workspace
 
 ### 1.创建第一个更新包
