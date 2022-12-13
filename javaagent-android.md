@@ -6,8 +6,9 @@
 2. 将McPatchClient.jar和配置文件config.yml（如果有）一起复制到游戏目录下，所谓游戏目录就是指.minecraft目录，无论何时，McPatchClient.jar和config.yml都需要放到.minecraft里面，注意是里面不是旁边
    1. 澪的默认路径：`/sdcard/MioLauncher/.minecraft`
    2. HMCLPE的默认路径：`/sdcard/HMCLPE/.minecraft`
+   3. 如果你开启了版本隔离，请将McPatchClient的文件移动到Minecraft游戏版本的核心文件旁边（核心文件通常由两个同名的jar和json文件组成，在`.minecraft/version/your-version`目录下）
 3. 配置启动参数
-   1. 澪：切换到`游戏配置`页面，在游戏参数（JVM参数）的最前面插入一段内容`-javaagent:/sdcard/MioLauncher/xxx.jar`（`xxx`换成将McPatchClient.jar的实际的文件名）接着点击保存按钮，然后重启澪
+   1. 澪：切换到`游戏配置`页面，在游戏参数（JVM参数）的最前面插入一段内容`-javaagent:/sdcard/MioLauncher/xxx.jar`（`xxx`换成将McPatchClient.jar的实际的文件名）接着点击保存按钮，然后重启澪。如果你开启了版本隔离，请转而按照下方HMCLPE的步骤进行配置
    2. HMCLPE：切换到`版本列表`，修改全局游戏设置或者特点版本设置，在Java虚拟机参数的最前面插入一段内容`-javaagent:xxx.jar`（`xxx`换成将McPatchClient.jar的实际的文件名），然后点击房子按钮回到主界面
 4. 启动游戏测试效果
    1. 澪：请打开日志窗口观察McPatchClient是否运行成功
