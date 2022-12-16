@@ -85,6 +85,14 @@ Error opening zip file or JAR Manifest missing: McPatchClient.jar
 
 题外话：图书馆模组的GitHub Issue里也有不少人反馈这个问题，但似乎这个模组很久未更新了
 
+### McPatchClient是否可以自己更新自己
+
+`问题描述`：McPatchClient是否可以通过把自身文件加入到更新中来实现自己更新自己？
+
+`问题解答`：不可以，因为Windows不允许对运行中的文件进行读写，故无法更新自己
+
+`小小提示`：虽然不可以更新客户端程序本身，但是更新配置文件`config.yml`是允许的，但缺点是第二次启动时新的配置文件才会生效
+
 ### 配置文件中的选项(xxx)无效
 
 `影响范围`：客户端全版本
