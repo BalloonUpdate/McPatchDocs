@@ -93,6 +93,16 @@ Error opening zip file or JAR Manifest missing: McPatchClient.jar
 
 `小小提示`：虽然不可以更新客户端程序本身，但是更新配置文件`config.yml`是允许的，但缺点是第二次启动时新的配置文件才会生效
 
+### 另一个程序已锁定文件的一部分，进程无法访问
+
+java.io.IOException：另一个程序已锁定文件的一部分，进程无法访问
+
+`影响范围`：客户端全版本
+
+`问题原因`：Windows不允许对一个正在运行中的文件进行读写操作
+
+`解决方法`：如果你使用JavaAgent启动，请不要更新游戏核心文件，游戏资源文件等易出错的文件。如果你未使用JavaAgent启动，请检查Minecraft进程是否退出再更新
+
 ### 配置文件中的选项(xxx)无效
 
 `影响范围`：客户端全版本

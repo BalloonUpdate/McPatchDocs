@@ -24,6 +24,7 @@
 + 要更新.minecraft目录旁边的`新玩家进服教程.txt`，复制`新玩家进服教程.txt`文件到`mp/workspace/新玩家进服教程.txt`
 + 如果你开了版本隔离，就需要复制`.minecraft/versions/your-version/mods`目录到`mp/workspace/.minecraft/versions/your-version/mods`
 + 其它文件以此类推，照葫芦画瓢即可。只复制要更新的文件，不更新的文件暂时不用复制
++ 注意如果你打算配置一键启动，那么Minecraft核心文件和Minecraft资源文件不要加入更新，大概率更新时会出问题！不要一股脑把整个.minecraft文件丢进去，要把核心文件和资源文件排除更新
 
 然后运行manage.bat，输入`1`来开始创建第一个更新包。第一个版本号通常输入1.0，当然你也可以输入其它内容，好了之后按Enter
 
