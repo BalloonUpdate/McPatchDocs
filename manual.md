@@ -42,8 +42,15 @@
 
 ### 2.开启自带的HttpServer
 
-1. 双击运行httpserver.bat，启动成功后复制API地址，粘贴到浏览器打开，如果一切顺利浏览器会显`FORBIDDEN: Directory is unable to show`
-2. 如果你需要从外网进行访问，把这个地址换成外网IP或者域名再访问一次，确保从外网访问没问题
+首先，双击运行httpserver.bat，启动成功后复制API地址
+
+第一步，用浏览器打开，如果正常浏览器会显示`FORBIDDEN: Directory is unable to show`
+
+第二步，如果你在公网IP环境部署HttpServer，或者有内网穿透或者端口映射，需要把localhost换成外网ip再用浏览器打开一次，确保没问题
+
+<p><div class="blinkred">注意如果你是在公网环境，端口映射或者内网穿透环境部署HttpServer，请将API地址里的localhost替换为你自己的外网地址，否则客户端100%会提示`连接被拒绝`或者`连接超时`</div></p>
+
+请确保浏览器显示`FORBIDDEN: Directory is unable to show`字样之后再进行下一步！这非常重要！
 
 ### 3.安装客户端
 
@@ -51,6 +58,9 @@
 2. 把McPatchClient.jar复制到.minecraft目录的旁边
 3. 用压缩软件打开McPatchClient.jar，把`config.yml`解压出来，并打开编辑
 4. 将服务端的API地址粘贴到config.yml中的`server`选项后面，然后保存关闭
+
+<p><div class="blinkred">注意如果你是在公网环境，端口映射或者内网穿透环境部署HttpServer，请将API地址里的localhost替换为你自己的外网地址，否则客户端100%会提示`连接被拒绝`或者`连接超时`</div></p>
+
 5. 双击运行McPatchClient.jar开始更新刚刚打包的第一个版本
 6. 更新完成后检查一下`mc-patch-version.txt`这个文件的内容，确保是`1.0`或者你刚创建的版本号
 
