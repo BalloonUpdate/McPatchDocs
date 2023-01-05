@@ -2,12 +2,18 @@
 
 ### -1.看常见问题解答
 
-!> 这里收录了所有报错信息和对应的解决方法，记得过来看看！
+!> 这里收录了所有的**报错信息**和对应的**解决方法**，记得过来看看！
 
 + [客户端常见问题解答](faq-client.md)
 + [管理端常见问题解答](faq-manage.md)
 
-McPatch不同于老版本的JarClient，使用中的许多概念都截然不同，使用过程中请务必仔细阅读文档
+McPatch不同于老版本的JarClient，许多概念都截然不同，使用过程中请务必仔细阅读文档
+
+一些常用导航链接：
+
++ Nginx，Apache，网站主机，SFTP，对象存储部署：参考[自由化部署](#自由化部署)章节
++ 不小心修改了history目录怎么办：参考[不小心修改了history目录](#不小心修改了history目录)章节
++ 如何加密配置文件和版本号文件：参考[加密配置文件和版本号文件](#加密配置文件和版本号文件)
 
 ### 0.准备工作
 
@@ -50,7 +56,7 @@ McPatch不同于老版本的JarClient，使用中的许多概念都截然不同�
 
 第二步，如果你在公网IP环境部署HttpServer，或者有内网穿透或者端口映射，需要把localhost换成外网ip再用浏览器打开一次，确保没问题
 
-<p><div class="blinkred">注意如果你是在公网环境，端口映射或者内网穿透环境部署HttpServer，请将API地址里的localhost替换为你自己的外网地址，否则客户端100%会提示`连接被拒绝`或者`连接超时`</div></p>
+<p><div class="blinkred">注意在本机调试好后，如果不将API地址里的localhost替换成你服务器的IP，客户端100%会提示`连接被拒绝`或者`连接超时`</div></p>
 
 请确保浏览器显示`FORBIDDEN: Directory is unable to show`字样之后再进行下一步！这非常重要！
 
@@ -61,7 +67,7 @@ McPatch不同于老版本的JarClient，使用中的许多概念都截然不同�
 3. 用压缩软件打开McPatchClient.jar，把`config.yml`解压出来，并打开编辑
 4. 将服务端的API地址粘贴到config.yml中的`server`选项后面，然后保存关闭
 
-<p><div class="blinkred">注意如果你是在公网环境，端口映射或者内网穿透环境部署HttpServer，请将API地址里的localhost替换为你自己的外网地址，否则客户端100%会提示`连接被拒绝`或者`连接超时`</div></p>
+<p><div class="blinkred">注意在本机调试好后，如果不将API地址里的localhost替换成你服务器的IP，客户端100%会提示`连接被拒绝`或者`连接超时`</div></p>
 
 5. 双击运行McPatchClient.jar开始更新刚刚打包的第一个版本
 6. 更新完成后检查一下`mc-patch-version.txt`这个文件的内容，确保是`1.0`或者你刚创建的版本号
@@ -72,7 +78,7 @@ McPatch不同于老版本的JarClient，使用中的许多概念都截然不同�
 8. 目前一键启动仅支持：[Windows平台](javaagent-windows.md)和[Android平台](javaagent-android.md)。如果你安装了猫反作弊模组，请转而使用[模组形式一键启动](modclient-all-platform.md)（支持所有平台）
 9. 如果你确定config.yml已经调试完成，可以把这个文件打包回McPatchClient.jar里，然后删除外部的config.yml，程序会自动读取Jar内部的配置文件，以保持目录整洁
 
-> 因为有自动扫描功能的存在，McPatchClient.jar的位置并不会影响更新到哪个路径，所以McPatchClient.jar无论放在哪个子目录下面运行都不会影响更新结果
+> 因为有自动定位功能的存在，McPatchClient.jar的位置并不会影响更新到哪个路径，所以McPatchClient.jar无论放在哪个子目录下面运行都不会影响更新结果
 
 ### 4.后续发布新版
 
@@ -110,8 +116,8 @@ McPatch不同于老版本的JarClient，使用中的许多概念都截然不同�
 
 以对象存储为例，你每打一个新版本，比如10.0，就需要将public目录里面的这三个文件上传到对象存储上：
 
-1. 二进制数据文件(.bin)：`10.0.mc-patch.json`（如果这个文件不存在就不用上传）
-2. 元数据文件(.json)：`10.0.mc-patch.bin`
+1. 二进制数据文件(.bin)：`10.0.mc-patch.json`
+2. 元数据文件(.json)：`10.0.mc-patch.bin`（如果这个文件不存在就不用上传）
 3. 版本列表文件(mc-patch-versions.txt)：此文件每次都需要上传
 
 然后，客户端server选项要这样填写：

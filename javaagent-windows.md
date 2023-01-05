@@ -1,7 +1,7 @@
 ## Windows平台一键启动
 
 1. 首先确保McPatchClient.jar双击启动没问题
-2. 将McPatchClient.jar文件移动到`.minecraft`目录下面
+2. 将McPatchClient.jar文件移动到`.minecraft`目录里面（注意是里面不是旁边）
 3. 打开启动器，找到JVM（Java虚拟机）参数。在现有内容的最前面插入一段`-javaagent:xxx.jar`（`xxx`换成McPatchClient.jar的实际的文件名）
 4. 启动游戏测试效果
 
