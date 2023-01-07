@@ -2,10 +2,12 @@
 
 1. 首先确保McPatchClient.jar双击启动没问题
 2. 将McPatchClient.jar文件移动到`.minecraft`目录里面（注意是里面不是旁边）
-3. 打开启动器，找到JVM（Java虚拟机）参数。在现有内容的最前面插入一段`-javaagent:xxx.jar`（`xxx`换成McPatchClient.jar的实际的文件名）
+3. 打开启动器，找到JVM（Java虚拟机）参数。在现有内容的最前面插入一段`-javaagent:xxx.jar `（`xxx`换成McPatchClient.jar的实际的文件名，注意`.jar`的后面还跟着一个空格别漏了）
 4. 启动游戏测试效果
 
 如果游戏无法启动，并且提示找不到McPatchClient.jar的文件名，而你又十分确定文件名没有写错时。记得看看你是不是开启了版本隔离，如果是，请将McPatchClient的文件移动到Minecraft游戏版本的核心文件旁边（核心文件通常由两个同名的jar和json文件组成，在`.minecraft/version/your-version`目录下）
+
+如果配置之后McPatchClient并没有随Minecraft启动（游戏正常启动也没有闪退啥的），请检查是否是开启了启动器的`版本特定设置`导致配置实际并未生效
 
 ## 游戏崩溃
 
