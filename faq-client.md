@@ -27,13 +27,20 @@ Error opening zip file or JAR Manifest missing: McPatchClient.jar
 
 McPatchClient.jar需要放到`.minecraft/`目录下（如果未开启版本隔离），或者放到`.minecraft/versions/your-version/`目录下（如果开启了版本隔离）
 
-### JavaAgent+Https下载限速问题
+### JavaAgent下载限速问题
+
+使用JavaAgent 启动时下载速度会变得非常慢，而双击启动时非常快
 
 `影响范围`：客户端全版本
 
-`问题原因`：问题源头目前未知
+`问题原因`：问题源头目前未知，和运行环境，启动器，Java版本（包括不同发行版），游戏版本都有关系
 
-`解决方法`：使用HTTP协议而非HTTPS协议可以解决下载限速的问题，或者使用SFTP源，和Webdav源
+`解决方法`：此问题目前无法彻底解决，但可以尝试一下方法
+
+1. 如果在使用HTTPS协议，尝试切换回HTTP协议
+2. 尝试升级Java版本
+3. 尝试更换启动器
+4. 尝试使用webdav源或者sftp源
 
 ### 连接被拒绝
 
