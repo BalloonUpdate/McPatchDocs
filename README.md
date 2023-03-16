@@ -2,7 +2,7 @@
 
 McPatch是一个Minecraft服务器客户端更新程序，管理端和客户端均支持JVM全平台，也就是PC端和手机端。
 
-当你服务器客户端发布了新的内容之后，你可以打一个更新包（差异包）放到Nginx，Apacha，对象存储，网站主机这些地方让客户端程序自动下载并更新到最新版本。全程无需玩家手动点击，可以自动在游戏启动时更新，随时保持玩家客户端为最新状态，通过一些技巧可以让玩家无需手动下载任何东西。
+当你服务器客户端发布了新的内容之后，你可以打一个更新包（差异包）放到宝塔，Nginx，Apacha，对象存储，网站主机这些地方让客户端程序自动下载并更新到最新版本。全程无需玩家手动点击，可以自动在游戏启动时更新，随时保持玩家客户端为最新状态。
 
 注意：软件是一个服务端—客户端架构的独立应用程序，不是模组，插件，不会扔进哪个地方就能工作，需要细心配置。
 
@@ -18,10 +18,10 @@ McPatch是一个Minecraft服务器客户端更新程序，管理端和客户端�
 
 ## 安装教程
 
-安装McPatch之前，您需要先下载3个Jar文件：
+安装McPatch之前，你需要先下载3个Jar文件：
 
 1. `McPatchManage.jar`：管理端，用来打出新的更新包。
-2. `MiniHttpServer.jar`：一个非常简单的服务端，用来开启一个HttpServer供客户端下载 #无抗攻击能力，也无高级功能，只有您不懂得自建http server时才推荐使用。
+2. `MiniHttpServer.jar`：服务端，用来开启一个小白友好的HttpServer供客户端下载更新
 3. `McPatchClient.jar`：客户端，用来更新客户端文件。
 
 如果一切妥当，点击前往[安装教程](manual.md)
@@ -30,7 +30,7 @@ McPatch是一个Minecraft服务器客户端更新程序，管理端和客户端�
 
 + [客户端常见问题解答](faq-client.md)
 + [管理端常见问题解答](faq-manage.md)
-+ [PC平台一键启动教程](javaagent-windows.md)
++ [Windows平台一键启动教程](javaagent-windows.md)
 + [Android平台一键启动教程](javaagent-android.md)
 + [模组形式一键启动](modclient-all-platform.md)
 

@@ -11,7 +11,7 @@
 
 ## 配置URL咒语启动，云端配置下发以及配置自更新（可选）
 前置动作：
-1. 将`config.yml、McPatchClient.jar、hmclversion.cfg`放在 `workspace/`内，一定要按照您想要的配置修改config.yml。
+1. 将`config.yml`、`McPatchClient.jar`、`hmclversion.cfg`放在 `workspace/`内，一定要按照您想要的配置修改config.yml。
 2. 打包一个新版本，并按照普通更新流程更新。
 3. 发布更新。
 
@@ -55,4 +55,4 @@
 
 当然，在McPatchClient主动崩溃Minecraft进程之前，会有非常显眼的错误提示框告诉你发生什么错误，错误可能是什么原因导致的。当你点击确定或者取消按钮以后，表明你已经知晓了是McPatchClient报告的错误之后，McPatchClient才会真正崩溃掉Minecraft进程。
 
-如果你不喜欢这种直接崩溃的做法，可以在配置文件里设置`no-throwing`选项来让McPatchClient遇到错误时不打断游戏启动的过程，而不是弹出崩溃Minecraft询问框，但可能会导致非预期的情况。
+如果你不喜欢这种直接崩溃的做法，可以在配置文件里设置`no-throwing`选项来让McPatchClient遇到错误时不打断游戏启动的过程，而不是弹出崩溃Minecraft询问框，但这样做可能会导致非预期的情况（比如有模组未更新就强行进入游戏会导致无法进服）。
