@@ -10,7 +10,7 @@
   - [做一键启动](tutorial-autostart.md)
     - [Windows平台](tutorial-autostart-windows.md)
     - [Android平台](tutorial-autostart-android.md)
-    - [模组方式启动](tutorial-autostart-module.md)
+    - [模组方式启动](tutorial-autostart-modclient.md)
   - [注意的事项](tutorial-notices.md)
 - [高级教程](advance.md)
   - [自由化部署](advance-freedeploy.md)
