@@ -7,4 +7,30 @@
 | Github Pages | 全球用户     | [点击这里](https://balloonupdate.github.io/McPatchDocs) |
 | Gitee Pages  | 中国大陆用户 | [点击这里](https://asforest.gitee.io/mcpatch-docs)      |
 
-如果你是贡献者，需要参与编辑，请[点击这里](for-contributors.md)
+如果你是贡献者，需要参与编辑，请往下阅读，下面将会讲解大部分编辑相关的工作流程
+
+### 文件用途
+
+仓库中各个文件目录的用途说明：
+
++ `pages`：存放文档所有的Markdown源文件
+  + `assets`：存放所有文档中引用的图片资源
+  + `SUMMARY.md`：文档的目录，需要严格的嵌套列表形式，点击查看[更多信息](https://rust-lang.github.io/mdBook/format/summary.html)
+  + `readme.md`：文档的封面页，没什么特殊的地方
+  + 其它md文件：文档的各个页面源文件
++ `tools`：存放文档构建工具，用来在本地编辑时可以实时看到页面更新
+  + `mdbook.exe`：文档构建工具，主要是在本地编辑时使用
+  + `mdbook-*.exe`：构建工具的插件，用来实现一些官方没有自带的效果
+  + `watch.bat`：文档构建工具的启动脚本，双击启动会自动打开浏览器，并监听文件修改自动更新浏览器页面
+  + `build.bat`：文档构建工具的启动脚本，双击启动会生成`production`版本的文档文件
+  + `clean.bat`：清理book目录
++ `theme`：存放主题或者样式文件
++ `book`：构建工具的输出目录，可以安全删除，无需推送到Git仓库
+
+### 添加新页面的方法
+
+在`pages`目录下新建`some-new-page.md`文件，然后编辑`SUMMARY.md`文件在合适的地方插入这个文件的链接，最后运行`tools/watch.bat`进入浏览器调试模式，就可以在左边目录里看到这个新页面的名字了
+
+### 关于图片的添加
+
+如果文章中需要插入图片，需要复制到`pages/assets`目录下，然后在文章中使用相对链接引用，尽量不要使用外链加载图片
