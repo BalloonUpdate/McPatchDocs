@@ -89,7 +89,7 @@ McPatchClient.jar需要放到`.minecraft/`目录下（如果未开启版本隔�
 
 ### Stream is not in the BZip2 format
 
-`影响范围`：客户端全版本
+`影响范围`：客户端1.0.13和之前的版本
 
 `问题原因`：代码bug导致
 
