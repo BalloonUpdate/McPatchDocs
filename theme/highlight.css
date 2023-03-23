@@ -1,0 +1,19 @@
+html.light main div.warn {
+    color: red;
+}
+
+html.rust main div.warn {
+    color: red;
+}
+
+html.coal main div.warn {
+    color: #ff4848;
+}
+
+html.navy main div.warn {
+    color: #ff4848
+}
+
+html.ayu main div.warn {
+    color: #ff4848
+}
