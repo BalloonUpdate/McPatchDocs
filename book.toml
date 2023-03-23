@@ -11,5 +11,5 @@ preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/BalloonUpdate/McPatchDocs"
 git-repository-icon = "fa-github"
 edit-url-template="https://github.com/BalloonUpdate/McPatchDocs/edit/master/{path}"
-additional-css = ["theme/pagetoc.css", "theme/highlight.css", "theme/line-height.css"]
-additional-js  = ["theme/pagetoc.js"]
+additional-css = ["theme/highlight.css", "theme/line-height.css"]
+additional-js  = []
