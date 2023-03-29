@@ -8,7 +8,17 @@
 
 `问题原因`：目前未知
 
-`解决方法`：在配置文件里把主题禁用即可`disable-theme: true`
+`解决方法`：在配置文件里把主题禁用即可`disable-theme: true`或者升级到1.0.13或更高的版本
+
+## Javaagent启动时卡住游戏无法启动
+
+在使用Javaagent启动时程序结束后游戏无法启动，一直卡在那，需要在任务管理器里手动关闭进程
+
+`影响范围`：客户端1.0.13或更高版本
+
+`问题原因`：客户端1.0.13开始更换了程序内部的启动方式，尝试以独立的进程启动以绕过限速和窗口未响应的问题
+
+`解决方法`：换回老的启动方式（此方法需要1.0.15或者更高版本）：用压缩软件打开客户端jar文件，在根目录下创建一个名为`.no-standalone-process`的空文件（也就是在`config.yml`的旁边）然后保存关闭
 
 ### Error opening zip file or JAR Manifest missing
 
@@ -27,9 +37,9 @@ Error opening zip file or JAR Manifest missing: McPatchClient.jar
 
 McPatchClient.jar需要放到`.minecraft/`目录下（如果未开启版本隔离），或者放到`.minecraft/versions/your-version/`目录下（如果开启了版本隔离）
 
-### JavaAgent下载限速问题
+### 下载限速问题
 
-使用JavaAgent 启动时下载速度会变得非常慢，而双击启动时非常快
+有小概率会遇到下载速度会变得非常慢，而双击启动时非常快。或者双击启动也非常慢，远远低于浏览器直接下载的速度
 
 `影响范围`：客户端全版本
 
@@ -37,11 +47,8 @@ McPatchClient.jar需要放到`.minecraft/`目录下（如果未开启版本隔�
 
 `解决方法`：此问题目前无法彻底解决，但可以尝试一下方法
 
-1. 如果在使用HTTPS协议，尝试切换回HTTP协议
-2. 尝试升级Java版本
-3. 尝试更换启动器
-4. 尝试使用webdav源或者sftp源
-5. 推荐玩家使用zulu jre，测试兼容，且性能更好。
+1. 更换Java发行版，比如换到openjdk，zulu等
+2. 升级到1.0.13或者更高版本
 
 ### 连接被拒绝
 
