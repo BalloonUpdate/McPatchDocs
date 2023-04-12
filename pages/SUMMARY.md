@@ -18,6 +18,7 @@
   - [配置URL咒语启动](advance-spellstart.md)
   - [ModClient自更新](advance-modclientselfupdate.md)
   - [合并更新包](advance-combine.md)
+  - [命令行直接打包](advance-onekey-pack.md)
 - [ 常见问题解答](faq.md)
   - [客户端](faq-client.md)
   - [管理端](faq-manage.md)
