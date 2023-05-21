@@ -24,3 +24,4 @@
   - [合并更新包](advance-combine.md)
   - [命令行直接打包](advance-onekey-pack.md)
   - [管理端ignores.txt](advance-ignores.md)
+  - [管理端overwrites.txt](advance-overwrites.md)
