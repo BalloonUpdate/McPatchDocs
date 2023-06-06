@@ -10,9 +10,7 @@ McPatch是一个给Minecraft客户端做文件更新的独立应用程序，支�
 
 ## 开源仓库
 
-| 项目   | 仓库                                                         |
-| ------ | ------------------------------------------------------------ |
-| 文档站 | [https://github.com/BalloonUpdate/McPatchDocs](https://github.com/BalloonUpdate/McPatchDocs) |
-| 管理端 | [https://github.com/BalloonUpdate/McPatchManage](https://github.com/BalloonUpdate/McPatchManage) |
-| 客户端 | [https://github.com/BalloonUpdate/McPatchClient](https://github.com/BalloonUpdate/McPatchClient) |
-| 服务端 | [https://github.com/BalloonUpdate/MiniHttpServer](https://github.com/BalloonUpdate/MiniHttpServer) |
++ 文档站：[https://github.com/BalloonUpdate/McPatchDocs](https://github.com/BalloonUpdate/McPatchDocs)
++ 管理端：[https://github.com/BalloonUpdate/McPatchManage](https://github.com/BalloonUpdate/McPatchManage)
++ 客户端：[https://github.com/BalloonUpdate/McPatchClient](https://github.com/BalloonUpdate/McPatchClient)
++ 服务端：[https://github.com/BalloonUpdate/MiniHttpServer](https://github.com/BalloonUpdate/MiniHttpServer)
