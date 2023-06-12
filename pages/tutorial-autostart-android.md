@@ -3,7 +3,7 @@
 教程这里以澪和HMCLPE作为示例
 
 1. 首先确保McPatchClient在电脑上双击启动没问题
-2. 将McPatchClient.jar和配置文件config.yml（如果有）一起复制到游戏目录下，所谓游戏目录就是指.minecraft目录，无论何时，McPatchClient.jar和config.yml都需要放到.minecraft里面，注意是里面不是旁边
+2. 将McPatchClient.jar和配置文件一起复制到游戏目录下，所谓游戏目录就是指.minecraft目录，无论何时，McPatchClient.jar和config.yml都需要放到.minecraft里面，注意是里面不是旁边
    1. 澪的默认路径：`/sdcard/MioLauncher/.minecraft`
    2. HMCLPE的默认路径：`/sdcard/HMCLPE/.minecraft`
    3. 如果你开启了版本隔离，请将McPatchClient的文件移动到Minecraft游戏版本的核心文件旁边（核心文件通常由两个同名的jar和json文件组成，在`.minecraft/version/your-version`目录下）

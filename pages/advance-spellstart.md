@@ -2,7 +2,7 @@
 
 前置动作：
 
-1. 将`config.yml`、`McPatchClient.jar`、`hmclversion.cfg`放在 `workspace/`内，一定要按照您想要的配置修改config.yml。
+1. 将配置文件、`McPatchClient.jar`、`hmclversion.cfg`放在 `workspace/`内，一定要按照您想要的配置修改配置文件。
 2. 打包一个新版本，并按照普通更新流程更新。
 3. 发布更新。
 
