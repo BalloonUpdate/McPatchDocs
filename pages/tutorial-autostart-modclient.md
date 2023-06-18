@@ -20,4 +20,10 @@
 
 ---
 
+如果你某些模组文件更新失败，删除失败，但客户端程序日志里又没有明显报错消息，那么你多半是遇到了模组启动优先级的问题。也就是这些更新失败的模组先于BalloonUpdateModLoader模组启动了
+
+遇到这个问题尝试在BalloonUpdateModLoader模组的文件名最前面加一个英文感叹号`!`来提升BalloonUpdateModLoader模组的启动优先级，确保BalloonUpdateModLoader先于要被更新的模组启动
+
+---
+
 ModClient支持给McPatchClient.jar本身做自更新，可以点击[这里](advance-modclientselfupdate.md)阅读详细的教程
