@@ -13,7 +13,7 @@
     - [Windows平台](tutorial-autostart-windows.md)
     - [Android平台](tutorial-autostart-android.md)
     - [模组方式启动](tutorial-autostart-modclient.md)
-  - [远程升级](tutorial-dynamicloader.md)
+  - [热升级](tutorial-dynamicloader.md)
 - [ 常见问题解答](faq.md)
   - [客户端](faq-client.md)
   - [管理端](faq-manage.md)

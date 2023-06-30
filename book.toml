@@ -7,7 +7,7 @@ title = "mcpatch docs"
 
 [output.html]
 default-theme = "light"
-preferred-dark-theme = "navy"
+preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/BalloonUpdate/McPatchDocs"
 git-repository-icon = "fa-github"
 edit-url-template="https://github.com/BalloonUpdate/McPatchDocs/edit/master/{path}"
