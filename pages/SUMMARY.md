@@ -26,3 +26,4 @@
   - [命令行直接打包](advance-onekey-pack.md)
   - [管理端ignores.txt](advance-ignores.md)
   - [管理端overwrites.txt](advance-overwrites.md)
+  - [以双击启动客户端](advance-runasexe.md)
