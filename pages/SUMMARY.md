@@ -8,7 +8,7 @@
   - [使用管理端](tutorial-manage.md)
   - [启动服务端](tutorial-minihttpserver.md)
   - [安装客户端](tutorial-client.md)
-  - [注意的事项](tutorial-notices.md)
+  - [FFFFFAQ](tutorial-notices.md)
   - [一键启动](tutorial-autostart.md)
     - [Windows平台](tutorial-autostart-windows.md)
     - [Android平台](tutorial-autostart-android.md)
