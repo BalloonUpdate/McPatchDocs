@@ -125,6 +125,16 @@ McPatchClient.jar需要放到`.minecraft/`目录下（如果未开启版本隔�
 
 `解决方法`：这不是程序bug，此时需要根据报错信息后面的状态详情来定位具体原因
 
+### java.lang.NoSuchMethodError
+
+`java.lang.NoSuchMethodError ..... org.apache.http.impl.client.HttpClientBuilder.setSSLContext`
+
+`影响范围`：客户端全版本
+
+`问题原因`：目前未知，会出现在1.16.5和更高版本上，同时使用webdav协议更新
+
+`解决方法`：删除客户端包内的`.no-standalone-process`文件使用独立进程启动；或者使用非webdav源进行更新
+
 ### Stream is not in the BZip2 format
 
 `影响范围`：客户端1.0.13和之前的版本
