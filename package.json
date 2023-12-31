@@ -1,0 +1,11 @@
+{
+  "name": "nd",
+  "packageManager": "yarn@3.6.1",
+  "devDependencies": {
+    "vuepress": "next"
+  },
+  "scripts": {
+    "dev": "vuepress dev pages",
+    "build": "vuepress build pages"
+  }
+}
