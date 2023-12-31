@@ -5,41 +5,38 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
   workflow_dispatch:
   
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
-    concurrency:
-      group: ${{ github.workflow }} # -${{ github.ref }}
-      cancel-in-progress: true
-    steps:
-      - name: git checkout
-        uses: actions/checkout@v2
-      
-      - name: set up rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: 1.70.0
-          override: true
-          
-      - name: rust cache
-        uses: Swatinem/rust-cache@v2
-        with:
-          cache-targets: false
-      
-      - name: mdbook
-        run: |
-          cargo install mdbook@0.4.28
-      
-      - name: render htmls
-        run: |
-          mdbook build
+    runs-on: ubuntu-latest
 
-      - name: deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-#         if: ${{ github.ref == 'refs/heads/main' }}
+    steps:
+      - uses: actions/checkout@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book
-          force_orphan: true
+          fetch-depth: 0
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Build VuePress site
+        run: pnpm build
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: gh-pages
+          build_dir: docs/.vuepress/dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
