@@ -1,4 +1,4 @@
-## 管理端overwrites.txt
+# 管理端overwrites.txt
 
 管理端overwrites是保存文件强制覆盖规则的地方。可以让某些文件在更新时每次都全量打包，而不是只记录增量信息
 

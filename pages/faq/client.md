@@ -1,4 +1,4 @@
-## 常见问题解答
+# 客户端FAQ
 
 一些常见的问题都列举在这里了，希望对你有帮助。 
 
@@ -62,6 +62,7 @@ McPatchClient.jar需要放到`.minecraft/`目录下（如果未开启版本隔�
 1. 升级客户端到1.0.13或者更高版本（大于等于1.1.7需要用压缩软件打开客户端jar文件删除根目录的`.no-standalone-process`文件）
 2. 把minihttpserver更换成nginx，apache等专业服务器软件
 3. 更换Java发行版，如openjdk，zulu等
+4. 尝试使用sftp协议更新
 
 ### 连接被拒绝
 
@@ -173,7 +174,7 @@ McPatchClient.jar需要放到`.minecraft/`目录下（如果未开启版本隔�
 
 `小小提示`：虽然不可以更新客户端程序本身，但是更新配置文件是允许的，但缺点是第二次启动时新的配置文件才会生效
 
-`解决方法`：可以参考[热更新](tutorial-dynamicloader.md)使用DynamicLoader，缺点同样是是第二次启动时才会生效
+`解决方法`：可以参考[热升级](/advance/dynamic-loader)使用DynamicLoader，缺点同样是是第二次启动时才会生效
 
 ### PCL的修改窗口标题改错了窗口
 

@@ -1,4 +1,4 @@
-## ModClient自更新教程
+# ModClient自更新教程
 
 借助ModClient的特殊能力，可以实现给McPatchClient.jar本身做自更新（即使McPatchClient.jar本身是不支持的）
 
