@@ -1,8 +1,7 @@
 {
   "name": "nd",
-  "packageManager": "yarn@3.6.1",
   "devDependencies": {
-    "vuepress": "next"
+    "vuepress": "2.0.0-rc.0"
   },
   "scripts": {
     "dev": "vuepress dev docs",
