@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-64e70b4c","path":"/advance/run-as-exe.html","title":"以双击启动客户端","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1704036060000,"contributors":[{"name":"asforest","email":"asforest@qq.com","commits":1}]},"filePathRelative":"advance/run-as-exe.md"}');export{e as data};
