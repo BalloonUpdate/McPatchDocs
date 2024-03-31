@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-2594e395","path":"/advance/modclient-self-update.html","title":"ModClient自更新教程","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1704036060000,"contributors":[{"name":"asforest","email":"asforest@qq.com","commits":1}]},"filePathRelative":"advance/modclient-self-update.md"}');export{e as data};

@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-8daa1a0e","path":"/","title":"","lang":"zh-CN","frontmatter":{"home":false},"headers":[{"level":2,"title":"McPatch","slug":"mcpatch","link":"#mcpatch","children":[]}],"git":{"updatedTime":1704036060000,"contributors":[{"name":"asforest","email":"asforest@qq.com","commits":1}]},"filePathRelative":"readme.md"}');export{e as data};
