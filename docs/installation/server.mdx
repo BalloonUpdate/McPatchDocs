@@ -1,0 +1,64 @@
+---
+sidebar_position: 12
+id: server
+title: 发布更新包
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## 前提条件
+你的文件夹里应有如下内容
+
+<img src="/img/installation-path.png" class="gameicon"/>
+
+如果没有这些内容，请回退至 [创建更新包#创建文件夹](/docs/installation/deploy)
+
+## 部署服务端
+
+<Tabs groupId="installation">
+  <TabItem value="httpserver" label="MiniHttpServer" default>
+    1. 前往 MiniHttpServer 的 [GitHub Releases](https://github.com/BalloonUpdate/MiniHttpServer/releases) 下载即可
+    + 和前文一样，你应该下载名称诸如 `MiniHttpServer-x.x.x.jar` 的文件，而不是 `Source code`
+
+    2. 将下载的 MiniHttpServer 导入你创建的文件夹
+
+    3. 创建 `httpserver.bat` 并写入如下内容：
+    ```bat title="httpserver.bat"
+    java -jar MiniHttpServer-x.x.x.jar & pause
+    ```
+
+    4. 双击 `httpserver.bat`，此时出现如下界面即为启动成功
+    <img src="/img/httpserver.png" class="gameicon"/>
+
+    5. 打开 [http://localhost:6600](http://localhost:6600/)，出现如下内容（即 `FORBIDDEN: Directory is unable to show`）即为服务正常
+    <img src="/img/httpserver-http.png" class="gameicon"/>
+  </TabItem>
+  <TabItem value="nginx" label="Nginx">
+    + 请参阅 [安装 nginx](https://docshome.gitbook.io/nginx-docs/readme/an-zhuang-nginx)
+  </TabItem>
+  <TabItem value="apache" label="Apache">
+    + 请参阅 [Apache安装配置(Windows和Linux)](https://cloud.tencent.com/developer/article/1698069)
+  </TabItem>
+  <TabItem value="s3" label="对象存储（S3）">
+    + 大部分对象存储都可以引导式部署，无需担心存储桶创建问题
+    + 各家的对象存储均有教程，请自行查阅相关文档
+  </TabItem>
+</Tabs>
+
+## 上传更新包
+<Tabs groupId="installation">
+  <TabItem value="httpserver" label="MiniHttpServer" default>
+    + 无需进行更多操作，MiniHttpServer 已经能处理相关文件
+  </TabItem>
+  <TabItem value="nginx" label="Nginx">
+    1. 创建一个网站
+    2. 把 `public` 里的所有文件上传至网站目录
+  </TabItem>
+  <TabItem value="apache" label="Apache">
+    1. 创建一个网站
+    2. 把 `public` 里的所有文件上传至网站目录
+  </TabItem>
+  <TabItem value="s3" label="对象存储（S3）">
+    + 暂不提供教程
+  </TabItem>
+</Tabs>
