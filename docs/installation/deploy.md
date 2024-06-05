@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 12
 id: deploy
 title: 创建更新包
 ---
