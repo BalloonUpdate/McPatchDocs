@@ -66,7 +66,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       announcementBar: {
         id: 'support_us',
-        content: '该版本仍在编写，请查阅 <a href="https://github.com/BalloonUpdate/McPatchDocs/">V1版本文档</a> & <a href="https://balloonupdate.github.io/McPatchDocsNext/">V2版本文档</a>',
+        content: '该版本仍在编写，请查阅 <a href="https://balloonupdate.github.io/McPatchDocs/">V1版本文档</a> & <a href="https://balloonupdate.github.io/McPatchDocsNext/">V2版本文档</a>',
         backgroundColor: '#2E8555',
         textColor: '#fff',
         isCloseable: true,
