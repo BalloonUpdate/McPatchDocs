@@ -74,7 +74,7 @@ java -jar McPatchManage-x.x.x.jar & pause
 
 :::note
 
-关于其他选项的相关内容请参阅 [进阶内容#管理端](/docs/installation/advanced)
+关于其他选项的相关内容请参阅 [进阶内容#管理端](/docs/advanced)
 
 :::
 
@@ -90,7 +90,7 @@ java -jar McPatchManage-x.x.x.jar & pause
 
 :::note
 
-关于强制覆盖的相关内容请参阅 [进阶内容#强制覆盖](/docs/installation/advanced)
+关于强制覆盖的相关内容请参阅 [进阶内容#强制覆盖](/docs/advanced)
 
 :::
 

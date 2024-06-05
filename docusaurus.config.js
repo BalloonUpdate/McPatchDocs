@@ -84,10 +84,6 @@ const config = {
             position: 'left',
             label: '文档',
           },
-          {
-            to: '/docs/faq/index.html',
-            label: '常见问题',
-          },
           {to: '/blog', label: '更新日志', position: 'left'},
           {
             href: 'https://jq.qq.com/?_wv=1027&k=PqAEtn39',
