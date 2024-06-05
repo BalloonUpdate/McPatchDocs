@@ -85,7 +85,7 @@ const config = {
             label: '文档',
           },
           {
-            to: '/docs/faq',
+            to: '/docs/faq/index.html',
             label: '常见问题',
           },
           {to: '/blog', label: '更新日志', position: 'left'},
