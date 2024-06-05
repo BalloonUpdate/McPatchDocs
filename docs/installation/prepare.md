@@ -30,6 +30,6 @@ title: 准备工作
 
 :::danger[关于官方启动器]
 
-+ 一定不要使用 `Minecraft Launcher`（即官方启动器），他不能满足我们后续的操作
++ 一定不要使用 `Minecraft Launcher`（即官方启动器），官方启动器不能满足我们后续的操作
 
 :::
