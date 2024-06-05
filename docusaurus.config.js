@@ -20,9 +20,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'NiuBoss123', // Usually your GitHub org/user name.
+  organizationName: 'BalloonUpdate', // Usually your GitHub org/user name.
   projectName: 'McPatchDocs', // Usually your repo name.
-  
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -44,14 +43,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/BalloonUpdate/McPatchDocs/tree/V2.0',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/BalloonUpdate/McPatchDocs/tree/V2.0',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -84,14 +83,6 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: '文档',
-          },
-          {
-            to: '/',
-            label: '自动部署',
-          },
-          {
-            to: '/',
-            label: '常见问题',
           },
           {to: '/blog', label: '更新日志', position: 'left'},
           {
@@ -157,7 +148,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} McPatch | 本网站由 <a href="https://www.akio.top/">御坂秋生</a> 编写`,
+        copyright: `© ${new Date().getFullYear()} McPatch`,
       },
       prism: {
         theme: prismThemes.github,

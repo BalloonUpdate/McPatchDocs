@@ -24,3 +24,12 @@ title: 准备工作
 + 你应该下载名称诸如 `McPatchManage-x.x.x.jar` 的文件，而不是 `Source code`
 
 :::
+
+## 下载 Minecraft 启动器
++ 可选择 `Hello Minecraft! Launcher`、`Plain Craft Launcher`
+
+:::danger[关于官方启动器]
+
++ 一定不要使用 `Minecraft Launcher`（即官方启动器），官方启动器不能满足我们后续的操作
+
+:::
