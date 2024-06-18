@@ -1,38 +1,33 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
+// 本文档使用 Docusaurus 编写，各类内容请查看 https://docusaurus.io
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'McPatchDocs',
-  tagline: 'Minecraft客户端文件更新解决方案',
-  favicon: 'img/logo.png',
+  title: 'McPatchDocs', //网站名称
+  tagline: 'Minecraft客户端文件更新解决方案', //网站简介
+  favicon: 'img/logo.png', //网站 Icon
+  url: 'https://docs.mcpatch.akio.top', //网站地址
+  baseUrl: '/', //路由
 
-  // Set the production url of your site here
-  url: 'https:///mcpatchdocs.akio.top',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'BalloonUpdate', // Usually your GitHub org/user name.
-  projectName: 'McPatchDocs', // Usually your repo name.
+  // GitHub 编辑引用
+  organizationName: 'BalloonUpdate', // 用户 & 组织名
+  projectName: 'McPatchDocs', // 仓库名
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // 国际化
   i18n: {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans'],
   },
 
+  // 插件
+  plugins: [
+    'plugin-image-zoom' //图片灯箱
+  ],
+
+  // 预设内容。https://docusaurus.io/zh-CN/docs/using-plugins#using-presets
   presets: [
     [
       'classic',
@@ -40,15 +35,11 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/BalloonUpdate/McPatchDocs/tree/V2.0',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/BalloonUpdate/McPatchDocs/tree/V2.0',
         },
@@ -59,11 +50,13 @@ const config = {
     ],
   ],
 
+  // 主题设置
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/docusaurus-social-card.jpg',//
+
+      // 顶部全局横条（姑且叫这个）
       announcementBar: {
         id: 'support_us',
         content: '该版本仍在编写，请查阅 <a href="https://balloonupdate.github.io/McPatchDocs/">V1版本文档</a> & <a href="https://balloonupdate.github.io/McPatchDocsNext/">V2版本文档</a>',
@@ -71,12 +64,15 @@ const config = {
         textColor: '#fff',
         isCloseable: true,
       },
+      // 网站信息
       navbar: {
-        title: 'McPatchDocs',
+        title: 'McPatchDocs', // 网站标题。显示在右上角
         logo: {
-          alt: 'McPatchDocs Logo',
-          src: 'img/logo.png',
+          alt: 'McPatchDocs Logo', // Logo名称
+          src: 'img/logo.png', //
         },
+
+        // 导航栏
         items: [
           {
             type: 'docSidebar',
@@ -84,11 +80,11 @@ const config = {
             position: 'left',
             label: '文档',
           },
-          {to: '/blog', label: '更新日志', position: 'left'},
+          //{to: '/blog', label: '更新日志', position: 'left'},
           {
             type: 'docsVersionDropdown',
             position: 'right',
-            dropdownActiveClassDisabled: false,
+            dropdownActiveClassDisabled: true,
           },
           {
             href: 'https://jq.qq.com/?_wv=1027&k=PqAEtn39',
@@ -102,6 +98,8 @@ const config = {
           },
         ],
       },
+
+      // 页脚
       footer: {
         style: 'dark',
         links: [
@@ -139,10 +137,6 @@ const config = {
             title: '其他',
             items: [
               {
-                label: '官方文档',
-                href: 'https://github.com/BalloonUpdate/McPatchDocs',
-              },
-              {
                 label: 'QQ群',
                 href: 'https://jq.qq.com/?_wv=1027&k=PqAEtn39',
               },
@@ -153,7 +147,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} McPatch`,
+        copyright: `<p><small>© ${new Date().getFullYear()} BalloonUpdate. Bulit with <a href="https://docusaurus.io/zh-CN">Docusaurus</a>.<br>`,
       },
       prism: {
         theme: prismThemes.github,
