@@ -1,3 +1,3 @@
 # McPatchDocs
 
-McPatchDocs' community unofficial website
+McPatchDocs' community official website
