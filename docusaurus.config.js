@@ -86,6 +86,11 @@ const config = {
           },
           {to: '/blog', label: '更新日志', position: 'left'},
           {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: false,
+          },
+          {
             href: 'https://jq.qq.com/?_wv=1027&k=PqAEtn39',
             label: 'QQ群',
             position: 'right',

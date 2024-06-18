@@ -21,7 +21,7 @@ java -jar McPatchManage-x.x.x.jar & pause
 
 此时程序会自动生成 `history`、`public`、`workspace` 三个文件夹，如下图
 
-<img src="/img/installation-path.png" class="gameicon"/>
+<img src="/img/1.0/installation-path.png" class="gameicon"/>
 
 + 如果缺少文件夹，可自行补齐
 + 如果缺少文件，请重走一遍文档，并检查自己是否遗漏了相关步骤
@@ -70,29 +70,17 @@ java -jar McPatchManage-x.x.x.jar & pause
 
 ## 创建更新包
 双击 `manage.bat`，会出现如下界面
-<img src="/img/installation-cmd.png" class="gameicon"/>
-
-:::note
-
-关于其他选项的相关内容请参阅 [进阶内容#管理端](/docs/advanced)
-
-:::
+<img src="/img/1.0/installation-cmd.png" class="gameicon"/>
 
 根据提示输入 `C`，出现如下界面
-<img src="/img/installation-cmd-c.png" class="gameicon"/>
+<img src="/img/1.0/installation-cmd-c.png" class="gameicon"/>
 
 我们假定更新的版本号为 `1.0`，根据提示输入 `1.0`
-<img src="/img/installation-cmd-c-1.0.png" class="gameicon"/>
+<img src="/img/1.0/installation-cmd-c-1.0.png" class="gameicon"/>
 此时出现版本号确认指示，根据提示输入 `y`
 
 此时出现强制覆盖的相关设定，由于我们是第一次打包，输入 `n` 即可
-<img src="/img/installation-cmd-c-1.0-y.png" class="gameicon"/>
-
-:::note
-
-关于强制覆盖的相关内容请参阅 [进阶内容#强制覆盖](/docs/advanced)
-
-:::
+<img src="/img/1.0/installation-cmd-c-1.0-y.png" class="gameicon"/>
 
 出现 `创建版本 1.0 完成`，则更新包创建成功
-<img src="/img/installation-cmd-c-1.0-y-n.png" class="gameicon"/>
+<img src="/img/1.0/installation-cmd-c-1.0-y-n.png" class="gameicon"/>
