@@ -80,7 +80,7 @@ const config = {
             position: 'left',
             label: '文档',
           },
-          //{to: '/blog', label: '更新日志', position: 'left'},
+          {to: '/blog', label: '更新日志', position: 'left'},
           {
             type: 'docsVersionDropdown',
             position: 'right',
