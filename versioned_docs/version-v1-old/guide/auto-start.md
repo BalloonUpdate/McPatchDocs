@@ -31,7 +31,7 @@ sidebar_position: 6
 
 ---
 
-McPatch客户端支持通过hmcl的下载整合包功能在线安装，点击[这里](/advance/spell-start)来阅读详细教程
+McPatch客户端支持通过hmcl的下载整合包功能在线安装，点击[这里](../advance/spell-start.md)来阅读详细教程
 
 ### 游戏崩溃
 
@@ -110,4 +110,4 @@ Android平台通常使用ARM处理器和LPDDR内存，无论是处理器功耗�
 
 ---
 
-ModClient支持给McPatchClient.jar本身做自更新，可以点击[这里](/advance/modclient-self-update)阅读详细的教程
+ModClient支持给McPatchClient.jar本身做自更新，可以点击[这里](../advance/modclient-self-update.md)阅读详细的教程

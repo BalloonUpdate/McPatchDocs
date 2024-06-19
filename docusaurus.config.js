@@ -14,7 +14,7 @@ const config = {
   organizationName: 'BalloonUpdate', // 用户 & 组织名
   projectName: 'McPatchDocs', // 仓库名
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
 
   // 国际化
   i18n: {
@@ -34,11 +34,11 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          lastVersion: 'current',
+          lastVersion: 'v1-old',
           versions: {
             current: {
-              label: 'v1-old',
-              path: 'v1-old',
+              label: 'v2',
+              path: 'v2',
             },
           },
           sidebarPath: './sidebars.js',

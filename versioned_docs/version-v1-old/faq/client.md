@@ -178,7 +178,7 @@ McPatchClient.jar需要放到`.minecraft/`目录下（如果未开启版本隔�
 
 `小小提示`：虽然不可以更新客户端程序本身，但是更新配置文件是允许的，但缺点是第二次启动时新的配置文件才会生效
 
-`解决方法`：可以参考[热升级](/advance/dynamic-loader)使用DynamicLoader，缺点同样是是第二次启动时才会生效
+`解决方法`：可以参考[热升级](../advance/dynamic-loader.md)使用DynamicLoader，缺点同样是是第二次启动时才会生效
 
 ### PCL的修改窗口标题改错了窗口
 
