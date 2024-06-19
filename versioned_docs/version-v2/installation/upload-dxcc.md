@@ -1,7 +1,6 @@
 ---
-sidebar_position: 13
-id: script-template
-title: 上传脚本模板
+sidebar_position: 20
+title: 上传对象存储
 ---
 
 管理端打包后，可能要把更新包上传到自己的服务器，或者对象存储上供大家下载。
