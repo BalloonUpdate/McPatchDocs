@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: McPatch 介绍
 ---
 

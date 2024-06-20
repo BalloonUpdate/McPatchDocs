@@ -1,7 +1,5 @@
 ---
-sidebar_position: 30
-id: faq
-title: 常见问题
+title: 文档总目录
 ---
 import DocCardList from '@theme/DocCardList';
 
