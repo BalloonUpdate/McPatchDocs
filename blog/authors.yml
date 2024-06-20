@@ -1,11 +1,17 @@
-asforest:
-  name: 四月森林
-  title: McPath 维护者
-  url: https://github.com/asforest
-  image_url: https://github.com/asforest.png
+endi:
+  name: Endilie Yacop Sucipto
+  title: Maintainer of Docusaurus
+  url: https://github.com/endiliey
+  image_url: https://github.com/endiliey.png
 
-niuboss123:
-  name: 御坂秋生
-  title: McPathDocs 新版文档编写者
-  url: https://github.com/NiuBoss123
-  image_url: https://github.com/NiuBoss123.png
+yangshun:
+  name: Yangshun Tay
+  title: Front End Engineer @ Facebook
+  url: https://github.com/yangshun
+  image_url: https://github.com/yangshun.png
+
+slorber:
+  name: Sébastien Lorber
+  title: Docusaurus maintainer
+  url: https://sebastienlorber.com
+  image_url: https://github.com/slorber.png
