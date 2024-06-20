@@ -41,7 +41,7 @@ const config = {
         blog: {
           showReadingTime: true,
           path: 'blog',
-          blogTitle: 'Lowlight 博客',
+          blogTitle: '更新日志',
           blogSidebarTitle: '所有文章',
           blogSidebarCount: 'ALL',
           showReadingTime: true,
