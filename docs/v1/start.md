@@ -1,6 +1,4 @@
 ---
-sidebar_position: 1
-id: start
 title: McPatch 介绍
 ---
 

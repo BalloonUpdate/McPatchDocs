@@ -1,6 +1,4 @@
 ---
-sidebar_position: 32
-id: client
 title: 客户端常见问题
 ---
 ## 更新时窗口无响应卡死或者内容丢失

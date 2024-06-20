@@ -1,6 +1,4 @@
 ---
-sidebar_position: 11
-id: prepare
 title: 准备工作
 ---
 ## 配置 Java 环境

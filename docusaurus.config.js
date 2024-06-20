@@ -34,13 +34,6 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          lastVersion: 'v1-old',
-          versions: {
-            current: {
-              label: 'v2',
-              path: 'v2',
-            },
-          },
           sidebarPath: './sidebars.js',
           editUrl:
             'https://github.com/BalloonUpdate/McPatchDocs/tree/V2.0',

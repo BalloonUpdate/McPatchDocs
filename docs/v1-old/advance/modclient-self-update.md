@@ -1,5 +1,5 @@
 ---
-title: ModClient自更新教程
+title: ModClient 自更新教程
 ---
 借助 ModClient 的特殊能力，可以实现给 McPatchClient.jar 本身做自更新（即使 McPatchClient.jar 本身是不支持的）
 

@@ -19,8 +19,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/start">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/v2/start">
+            花 10 分钟搭建一个
           </Link>
         </div>
       </div>
@@ -33,7 +33,15 @@ export default function Home() {
   return (
     <Layout
       title={`首页`}
-      description="Description will go into a meta tag in <head />">
+      description="McPath，更新客户端文件，Mod 服好帮手">
+        <div>
+        <div className={styles.HomepageTips}>
+          给我们的组织
+            <Link to="https://github.com/BalloonUpdate">
+              点个 follow 吧
+            </Link>
+          </div>
+        </div>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

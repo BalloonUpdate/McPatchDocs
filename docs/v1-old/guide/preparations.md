@@ -15,21 +15,21 @@ title: 准备工作
 2. `MiniHttpServer.jar`（服务端）：小白友好的HTTP服务器，用来让客户端下载更新
 3. `McPatchClient.jar`（客户端）：用来更新客户端文件
 
-然后在桌面新建一个文件夹叫`mp`（名字可以随意），再把管理端和服务端放进去，要放到一起
+然后在桌面新建一个文件夹叫 `mp`（名字可以随意），再把管理端和服务端放进去，要放到一起
 
 ## 编写启动脚本
 
 接下来需要编写两个简单的启动脚本来启动管理端和服务端
 
-1. 打开刚创建的`mp`目录
-2. 新建`manage.bat`，粘贴`java -jar xxx.jar & pause`，然后保存关闭
-   + 把`xxx`换成管理端的实际文件名
-3. 新建`httpserver.bat`，粘贴`java -jar xxx.jar & pause`，然后保存关闭
-   + 把`xxx`换成服务端的实际文件名
-4. 在`mp`目录下创建一个新的目录叫`workspace`
+1. 打开刚创建的 `mp` 目录
+2. 新建 `manage.bat`，粘贴 `java -jar xxx.jar & pause`，然后保存关闭
+   + 把 `xxx` 换成管理端的实际文件名
+3. 新建 `httpserver.bat`，粘贴 `java -jar xxx.jar & pause`，然后保存关闭
+   + 把 `xxx` 换成服务端的实际文件名
+4. 在 `mp` 目录下创建一个新的目录叫 `workspace`
 
 每个文件的用途：
 
-+ `manage.bat`脚本用来启动管理端，打新的更新包，用完后可以关掉管理端
-+ `httpserver.bat`脚本用来启动服务端，给客户端下载用，需要一直开着不能关闭
-+ `workspace`目录用来存放你要更新的文件
++ `manage.bat` 脚本用来启动管理端，打新的更新包，用完后可以关掉管理端
++ `httpserver.bat` 脚本用来启动服务端，给客户端下载用，需要一直开着不能关闭
++ `workspace` 目录用来存放你要更新的文件
