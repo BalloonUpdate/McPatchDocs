@@ -21,3 +21,14 @@
   align-items: center;
   justify-content: center;
 }
+
+/* 首页公告样式 */
+
+.HomepageTips {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 16px;
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
