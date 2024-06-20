@@ -47,6 +47,12 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          path: 'blog',
+          blogTitle: '更新日志',
+          blogSidebarTitle: '所有文章',
+          blogSidebarCount: 'ALL',
+          showReadingTime: true,
+          postsPerPage: 5,
           editUrl:
             'https://github.com/BalloonUpdate/McPatchDocs/tree/V2.0',
         },
