@@ -34,19 +34,18 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          lastVersion: 'v1-old',
-          versions: {
-            current: {
-              label: 'v2',
-              path: 'v2',
-            },
-          },
           sidebarPath: './sidebars.js',
           editUrl:
             'https://github.com/BalloonUpdate/McPatchDocs/tree/V2.0',
         },
         blog: {
           showReadingTime: true,
+          path: 'blog',
+          blogTitle: 'Lowlight 博客',
+          blogSidebarTitle: '所有文章',
+          blogSidebarCount: 'ALL',
+          showReadingTime: true,
+          postsPerPage: 5,
           editUrl:
             'https://github.com/BalloonUpdate/McPatchDocs/tree/V2.0',
         },
@@ -64,13 +63,13 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',//
 
       // 顶部全局横条（姑且叫这个）
-      announcementBar: {
+      /* announcementBar: {
         id: 'support_us',
         content: '该版本仍在编写，请查阅 <a href="https://balloonupdate.github.io/McPatchDocs/">V1版本文档</a> & <a href="https://balloonupdate.github.io/McPatchDocsNext/">V2版本文档</a>',
         backgroundColor: '#2E8555',
         textColor: '#fff',
         isCloseable: true,
-      },
+      }, */
       // 网站信息
       navbar: {
         title: 'McPatchDocs', // 网站标题。显示在右上角
@@ -82,17 +81,21 @@ const config = {
         // 导航栏
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            href: '/docs/v1-old/start',
+            label: 'V1 旧版文档',
             position: 'left',
-            label: '文档',
+          },
+          {
+            href: '/docs/v1/start',
+            label: 'V1 新版文档',
+            position: 'left',
+          },
+          {
+            href: '/docs/v2/start',
+            label: 'V2 文档',
+            position: 'left',
           },
           {to: '/blog', label: '更新日志', position: 'left'},
-          {
-            type: 'docsVersionDropdown',
-            position: 'right',
-            dropdownActiveClassDisabled: true,
-          },
           {
             href: 'https://jq.qq.com/?_wv=1027&k=PqAEtn39',
             label: 'QQ群',
