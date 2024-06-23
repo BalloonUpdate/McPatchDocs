@@ -184,6 +184,11 @@ const sidebars = {
           'v2/maintain/client-self-upgrade',
       ],
     },
+    {
+      type: 'doc',
+      id: 'v2/faq',
+      label: '常见问题',
+    },
   ],
 };
 
