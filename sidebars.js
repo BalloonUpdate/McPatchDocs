@@ -164,7 +164,7 @@ const sidebars = {
       },
       items: [
           'v2/installation/guide',
-          'v2/installation/upload-dxcc',
+          'v2/installation/upload',
       ],
     },
     {
