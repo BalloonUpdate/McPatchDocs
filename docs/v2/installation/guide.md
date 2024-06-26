@@ -89,15 +89,17 @@ title: 安装教程
 
 如果需要从bat调用启动内置服务端的话可以这样写`mcpatch-manager.exe serve 6700`。
 
-（一般都是开两个管理端进程实例，一个打包用，用完叉掉。一个跑内置服务端，一直挂在后台）
+（一般都是同时开两个管理端进程实例，一个打包用，用完叉掉。一个跑内置服务端，一直挂在后台）
 
 内置的服务端使用基于TCP的私有协议，不是http不用担心备案问题，适合小服或者本地调试环境。
 
 ## 七、配置客户端
 
-将客户端放到`.minecraft`目录旁边紧挨着，然后直接双击运行。
+将客户端放到`.minecraft/gengxin`目录里面（需要手动创建），然后直接双击运行。
 
-看到窗口弹出后把它关掉，此时它会生成配置文件`mcpatch.yml`，我们打开编辑。
+不出意外的话，客户端会报错无法连接，不用管这个报错直接关掉。
+
+此时它会生成配置文件`mcpatch.yml`，我们需要打开编辑。
 
 唯一需要修改的是`urls`选项，这个参数控制更新服务器的地址，将127.0.0.1:6700修改成自己服务器的ip和端口即可。
 
@@ -109,15 +111,19 @@ title: 安装教程
 
 首先到[BalloonUpdate/McPatch2Loader](https://github.com/BalloonUpdate/McPatch2Loader/releases)下载最新版的加载器文件。
 
-新建目录`.minecraft/mp`，把刚下载的加载器和客户端程序移动进来。
+再放到`.minecraft/gengxin`目录里面，和客户端程序放到一起。
+
+再在此处创建“启动列表”文件，叫`startlist.txt`。
+
+将客户端程序的文件名复制，比如`mcpatch-client-0.0.0.exe`。粘贴到`startlist.txt`里，保存关闭。
 
 打开Minecraft启动器（任意启动器均可，官方启动器除外），调整游戏版本设置，找到Java虚拟机参数（或者JVM 参数）。
 
-在参数的开头插入这串代码`-javaagent:mp/loader-1.jar`，然后回到启动器主界面。（此时先不要启动游戏）
-
-接着创建“启动列表”文件`.minecraft/mp/startlist.txt`，将客户端程序的文件名写到这个文件的第一行，比如`mcpatch-client-0.0.0.exe`，然后保存关闭。
+在参数的开头插入这串代码`-javaagent:gengxin/loader.jar`，然后回到启动器主界面。
 
 点击Minecraft启动器的“启动游戏”按钮，一切顺利的话就会自动启动更新了。
+
+如果提示`loader.jar`找不到。可以试试将参数换成这个：`-javaagent:../../gengxin/loader.jar`。尤其是启动器开启版本隔离后，特别有效。
 
 ## 九、经常被问到的问题
 
