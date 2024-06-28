@@ -119,11 +119,15 @@ title: 安装教程
 
 打开Minecraft启动器（任意启动器均可，官方启动器除外），调整游戏版本设置，找到Java虚拟机参数（或者JVM 参数）。
 
-在参数的开头插入这串代码`-javaagent:gengxin/loader.jar`，然后回到启动器主界面。
+在参数的开头插入这串代码`-javaagent:gengxin/《举个栗子》.jar `（注意jar后面还有个空格也不要漏），然后回到启动器主界面。
+
+《举个栗子》要换成loader.jar的实际文件名，这里只是举例，下文同理。
 
 点击Minecraft启动器的“启动游戏”按钮，一切顺利的话就会自动启动更新了。
 
-如果提示`loader.jar`找不到。可以试试将参数换成这个：`-javaagent:../../gengxin/loader.jar`。尤其是启动器开启版本隔离后，特别有效。
+如果启动游戏提示`Error opening zip file or JAR manifest missing`。
+
+可以试试将参数换成这个：`-javaagent:../../gengxin/《举个栗子》.jar `，这样多加一个`../../`。尤其是启动器开启版本隔离后，特别有效。
 
 ## 九、经常被问到的问题
 
