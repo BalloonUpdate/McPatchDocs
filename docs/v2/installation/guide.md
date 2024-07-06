@@ -111,7 +111,9 @@ title: 安装教程
 
 首先到[BalloonUpdate/McPatch2Loader](https://github.com/BalloonUpdate/McPatch2Loader/releases)下载最新版的加载器文件。
 
-再放到`.minecraft/gengxin`目录里面，和客户端程序放到一起。
+打开Minecraft客户端的`.minecraft/gengxin`目录。
+
+将加载器放在里面，和客户端程序放到一起。
 
 再在此处创建“启动列表”文件，叫`startlist.txt`。
 
