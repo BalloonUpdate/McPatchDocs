@@ -181,7 +181,6 @@ const sidebars = {
       },
       items: [
           'v2/maintain/combine-versions',
-          'v2/maintain/client-self-upgrade',
       ],
     },
     {
