@@ -8,7 +8,7 @@ const config = {
   tagline: 'Minecraft客户端文件更新解决方案', //网站简介
   favicon: 'img/logo.png', //网站 Icon
   url: 'https://docs.mcpatch.akio.top', //网站地址
-  baseUrl: '/', //路由
+  baseUrl: '/McPatchDocs/', //路由
 
   // GitHub 编辑引用
   organizationName: 'BalloonUpdate', // 用户 & 组织名
