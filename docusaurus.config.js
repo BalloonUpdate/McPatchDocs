@@ -36,7 +36,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl:
-            'https://github.com/BalloonUpdate/McPatchDocs/tree/V2.0',
+            'https://github.com/BalloonUpdate/McPatchDocs/tree/main',
         },
         blog: {
           showReadingTime: true,
@@ -47,7 +47,7 @@ const config = {
           showReadingTime: true,
           postsPerPage: 5,
           editUrl:
-            'https://github.com/BalloonUpdate/McPatchDocs/tree/V2.0',
+            'https://github.com/BalloonUpdate/McPatchDocs/tree/main',
         },
         theme: {
           customCss: './src/css/custom.css',
