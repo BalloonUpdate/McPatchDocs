@@ -107,6 +107,11 @@ const sidebars = {
           'v1-old/advance/run-as-exe',
       ],
     },
+    {
+      type: 'doc',
+      id: 'v1-old/config',
+      label: '默认配置文件',
+    },
   ],
   v1Sidebar: [
     {
@@ -165,6 +170,11 @@ const sidebars = {
           'v1/faq/client',
       ],
     },
+    {
+      type: 'doc',
+      id: 'v1/config',
+      label: '默认配置文件',
+    },
   ],
   v2Sidebar: [
     {
@@ -209,6 +219,11 @@ const sidebars = {
       type: 'doc',
       id: 'v2/faq',
       label: '常见问题',
+    },
+    {
+      type: 'doc',
+      id: 'v2/config',
+      label: '默认配置文件',
     },
   ],
 };

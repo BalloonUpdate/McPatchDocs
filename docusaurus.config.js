@@ -152,7 +152,7 @@ const config = {
               },
               {
                 label: '爱发电',
-                href: 'https://afdian.net/a/aprilforest',
+                href: 'https://afdian.com/a/aprilforest',
               },
             ],
           },
