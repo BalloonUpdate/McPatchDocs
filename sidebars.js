@@ -201,18 +201,20 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '日常维护',
+      label: '最佳实践',
       collapsed: false,
       link: {
         type: 'generated-index',
-        title: '日常维护',
-        description: '日常维护 McPath 要做的事',
-        slug: '/v2/maintain',
-        keywords: ['v2/maintain'],
+        title: '最佳实践',
+        description: '一些优化 McPatch 要做的事',
+        slug: '/v2/practices',
+        keywords: ['v2/practices'],
         image: '/img/docusaurus.png',
       },
       items: [
-          'v2/maintain/combine-versions',
+          'v2/practices/combine-versions',
+          'v2/practices/self-update.md',
+          'v2/practices/cdn'
       ],
     },
     {
