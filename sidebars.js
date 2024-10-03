@@ -213,7 +213,7 @@ const sidebars = {
       },
       items: [
           'v2/practices/combine-versions',
-          'v2/practices/self-update.md',
+          'v2/practices/self-update',
           'v2/practices/cdn'
       ],
     },
