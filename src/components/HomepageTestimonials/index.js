@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: '御坂秋生',
     id: 'NiuBoss123',
-    avatar: 'https:/github.com/NiuBoss123.png',
+    avatar: 'https://github.com/NiuBoss123.png',
     quote: '服务器所使用的 mod 更新速度非常快，感谢 McPatch 方便我们分发 mod，这下再也不需要每次都往群里面传最新的 mod 了',
   },
   {
