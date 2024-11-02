@@ -66,7 +66,7 @@ const config = {
       /* announcementBar: {
         id: 'support_us',
         content: '该版本仍在编写，请查阅 <a href="https://balloonupdate.github.io/McPatchDocs/">V1版本文档</a> & <a href="https://balloonupdate.github.io/McPatchDocsNext/">V2版本文档</a>',
-        backgroundColor: '#2E8555',
+        backgroundColor: '#84ccc9',
         textColor: '#fff',
         isCloseable: true,
       }, */
@@ -154,11 +154,7 @@ const config = {
               {
                 label: '贡献者列表',
                 href: '/contribute',
-              },
-              {
-                label: '爱发电',
-                href: 'https://afdian.com/a/aprilforest',
-              },
+              }
             ],
           },
           {

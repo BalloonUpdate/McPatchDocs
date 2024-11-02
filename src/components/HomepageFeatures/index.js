@@ -13,15 +13,6 @@ const FeatureList = [
     ),
   },
   {
-    title: '拥有多种更新协议',
-    //Svg: require('/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        支持免备案开箱即用的私有协议，也支持更加通用的http，还支持web协议访问
-      </>
-    ),
-  },
-  {
     title: '对 Minecraft 服主友好',
     //Svg: require('/static/img/undraw_docusaurus_react.svg').default,
     description: (
@@ -36,7 +27,7 @@ function Feature({Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <Heading as="h2">{title}</Heading>
         <p>{description}</p>
       </div>
     </div>
@@ -47,7 +38,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={clsx('row', styles.centered)}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

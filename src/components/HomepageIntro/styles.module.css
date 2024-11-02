@@ -1,0 +1,81 @@
+/* src/components/HomepageIntro.module.css */
+.introContainer {
+  padding: 40px 0;
+}
+
+.introSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.introImage {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.introImage img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* 去除图片底部的空白 */
+}
+
+.introText {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.introText h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.introText p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* 右图左文字的样式 */
+.introSection:nth-child(2) .introImage {
+  order: 2;
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+.introSection:nth-child(2) .introText {
+  order: 1;
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+/* 媒体查询：在宽度较窄的环境下切换到上图下文字的布局 */
+@media (max-width: 768px) {
+  .introSection {
+    flex-direction: column;
+  }
+
+  .introImage,
+  .introText {
+    padding: 0;
+    text-align: center;
+  }
+
+  .introImage {
+    margin-bottom: 20px;
+  }
+
+  .introImage img {
+    max-width: 80%; /* 设置图片的最大宽度 */
+    margin: 0 auto; /* 使图片居中 */
+  }
+
+  .introSection:nth-child(2) .introImage {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .introSection:nth-child(2) .introText {
+    order: 2;
+  }
+}

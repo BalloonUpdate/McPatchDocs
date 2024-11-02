@@ -2,7 +2,9 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import HomepageIntro from '/src/components/HomepageIntro';
 import HomepageFeatures from '/src/components/HomepageFeatures';
+import HomepageTestimonials from '/src/components/HomepageTestimonials';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -44,7 +46,9 @@ export default function Home() {
         </div>
       <HomepageHeader />
       <main>
+        <HomepageIntro />
         <HomepageFeatures />
+        <HomepageTestimonials />
       </main>
     </Layout>
   );
