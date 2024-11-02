@@ -12,7 +12,7 @@ function HomepageIntro() {
         </div>
         <div className={styles.introText}>
           <h2>
-            McPath 不仅提供了便捷的客户端文件更新功能，还支持多种 Mod 服的配置和优化。无论你是新手还是老手，McPath 都能满足你的需求。
+            McPatch 不仅提供了便捷的客户端文件更新功能，还支持多种 Mod 服的配置和优化。无论你是新手还是老手，McPath 都能满足你的需求。
           </h2>
         </div>
       </div>
@@ -32,7 +32,7 @@ function HomepageIntro() {
         </div>
         <div className={styles.introText}>
           <h2>
-            McPath 十分轻量。可以忽略不计的运行占用，不超过 20Mb 的程序大小，再低配置的服务器都可以运作起来。
+            McPatch 十分轻量。可以忽略不计的运行占用，不超过 20Mb 的程序大小，再低配置的服务器都可以运作起来。
           </h2>
         </div>
       </div>
