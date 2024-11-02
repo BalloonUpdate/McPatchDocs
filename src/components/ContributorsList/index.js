@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from '@docusaurus/Link';
-import styles from './ContributorsList.module.css'; // 创建一个 CSS 模块
+import styles from './styles.module.css'; // 创建一个 CSS 模块
 
 const ContributorsList = ({ projectName, repoUrl }) => {
   const [contributors, setContributors] = useState([]);
