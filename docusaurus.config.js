@@ -82,20 +82,25 @@ const config = {
         items: [
           {
             href: '/docs/v1-old/start',
-            label: 'V1 旧版文档',
+            label: 'V1 文档',
             position: 'left',
           },
-          {
+          /*{
             href: '/docs/v1/start',
             label: 'V1 新版文档',
             position: 'left',
-          },
+          },*/
           {
             href: '/docs/v2/start',
             label: 'V2 文档',
             position: 'left',
           },
           {to: '/blog', label: '更新日志', position: 'left'},
+          {
+            href: '/contribute',
+            label: '贡献者列表',
+            position: 'right',
+          },
           {
             href: 'https://jq.qq.com/?_wv=1027&k=PqAEtn39',
             label: 'QQ群',
@@ -145,6 +150,19 @@ const config = {
           },
           {
             title: '其他',
+            items: [
+              {
+                label: '贡献者列表',
+                href: '/contribute',
+              },
+              {
+                label: '爱发电',
+                href: 'https://afdian.com/a/aprilforest',
+              },
+            ],
+          },
+          {
+            title: '相关链接',
             items: [
               {
                 label: 'QQ群',

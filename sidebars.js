@@ -26,13 +26,13 @@ const sidebars = {
     {
       type: 'doc',
       id: 'v1-old/start',
-      label: 'V1 旧版文档',
+      label: 'V1 文档',
     },
-    {
+    /*{
       type: 'doc',
       id: 'v1/start',
       label: 'V1 新版文档',
-    },
+    },*/
     {
       type: 'doc',
       id: 'v2/start',
