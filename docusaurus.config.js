@@ -178,6 +178,26 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+  // 添加主题配置
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // 配置搜索
+        language: ["en","zh"],
+        // 其他配置
+        hashed: true,
+        // 显示搜索快捷键提示 (应该是布尔值而不是字符串)
+        searchBarShortcutHint: true,
+        // 高亮搜索结果
+        highlightSearchTermsOnTargetPage: true,
+        // 搜索结果预览长度
+        searchResultContextMaxLength: 50
+      }),
+    ],
+  ],
 };
 
 export default config;
