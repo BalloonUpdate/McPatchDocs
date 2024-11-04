@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import ContributorsList from '../components/ContributorsList';
-import styles from '../components/ContributorsList/styles.module.css'; // 创建一个 CSS 模块
+import styles from './contributors.module.css';
 
 const ContributorsPage = () => {
   return (

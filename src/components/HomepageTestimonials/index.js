@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
-import yaml from 'js-yaml';
 
 const testimonials = [
   {

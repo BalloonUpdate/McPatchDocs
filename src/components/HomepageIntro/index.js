@@ -1,7 +1,7 @@
 // src/components/HomepageIntro.js
 import React from 'react';
 import clsx from 'clsx';
-import styles from './styles.module.css'; // 创建一个新的 CSS 模块文件
+import styles from './styles.module.css';
 
 function HomepageIntro() {
   return (
