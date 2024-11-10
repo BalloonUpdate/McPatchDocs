@@ -1,0 +1,42 @@
+.container {
+  margin-bottom: 2rem;
+}
+
+.projectTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contributorsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start; /* 靠左对齐 */
+}
+
+.contributorItem {
+  text-align: center;
+  background-color: var(--ifm-background-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  width: 150px; /* 固定宽度 */
+}
+
+.contributorItem:hover {
+  transform: translateY(-5px);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.contributorName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--ifm-font-color-base);
+}
