@@ -1,0 +1,52 @@
+{
+    "ec": 200,
+    "em": "",
+    "data": {
+      "user": {
+        "user_id": "3c0021da845b11eb8de752540025c377",
+        "status": 1,
+        "name": "四月浅森",
+        "gender": 0,
+        "birthday": "",
+        "avatar": "https://pic1.afdiancdn.com/user/3c0021da845b11eb8de752540025c377/avatar/d510e4ac7a0e40c8bcd2d3d315bd1256_w200_h200_s66.jpg",
+        "cover": "https://pic1.afdiancdn.com/user/3c0021da845b11eb8de752540025c377/common/20214637fb30e8a69eb470b1e2f50783_w1920_h800_s3279.jpg",
+        "url_slug": "aprilforest",
+        "is_verified": 1,
+        "verified_type": 2,
+        "is_not_rec": 0,
+        "show_sponsoring": 0,
+        "default_page": 1,
+        "show_badge": 1,
+        "has_mark": 0,
+        "creator": {
+          "user_id": "3c0021da845b11eb8de752540025c377",
+          "status": 2,
+          "category_id": "ed45455e30dc11e89fd452540025c377",
+          "type": 1,
+          "doing": "Minecraft客户端文件更新解决方案",
+          "detail": "Minecraft客户端更新方案，再也不用发布完整客户端压缩包，对经常要升级Mod版本的服务器非常友好。\n\n https://www.mcbbs.net/thread-711833-1-1.html",
+          "pic": "",
+          "create_time": 1615682789,
+          "custom_plan": 1,
+          "custom_plan_desc": "如果喜欢我的作品，请随缘赞助哦",
+          "is_tic": 0,
+          "show_album": 1,
+          "show_shop": 0,
+          "homepage_product_count": -1,
+          "can_copy_text": 1,
+          "can_copy_pic": 1,
+          "watermark": 1,
+          "monthly_fans": 1,
+          "monthly_income": "**",
+          "privacy_public_income": 0,
+          "privacy_public_sponsor": 1,
+          "discount_option": 1,
+          "limit_show_product_count": -1,
+          "show_sponsor_list": 1,
+          "category": { "category_id": "ed45455e30dc11e89fd452540025c377", "name": "游戏" },
+          "album_count": 0
+        },
+        "is_sponsoring": 0
+      }
+    }
+  }

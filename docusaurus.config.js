@@ -24,7 +24,8 @@ const config = {
 
   // 插件
   plugins: [
-    'plugin-image-zoom' //图片灯箱
+    'plugin-image-zoom', //图片灯箱
+    './plugins/sponsor-info',
   ],
 
   // 预设内容。https://docusaurus.io/zh-CN/docs/using-plugins#using-presets
@@ -99,6 +100,11 @@ const config = {
           {
             href: '/docs/release-notes',
             label: '更新记录',
+            position: 'left',
+          },
+          {
+            href: '/docs/sponsors',
+            label: '赞助名单',
             position: 'left',
           },
           {
