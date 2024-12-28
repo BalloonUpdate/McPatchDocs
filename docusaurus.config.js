@@ -105,7 +105,7 @@ const config = {
           {
             href: '/docs/sponsors',
             label: '赞助名单',
-            position: 'left',
+            position: 'right',
           },
           {
             href: '/contribute',
