@@ -240,7 +240,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'v2/config',
-      label: '默认配置文件',
+      label: '配置文件参考',
     },
   ],
 };

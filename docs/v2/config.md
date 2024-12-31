@@ -1,8 +1,8 @@
 ---
-title: 默认配置文件
+title: 配置文件参考
 ---
 ## 客户端 mcpatch.yml
-```
+```yaml
 # 更新服务器地址，可以填写多个备用地址，当一个不可用时会切换到备用地址上
 # 目前支持的协议：http(s)、webdav(s)、私有协议
 #
@@ -76,4 +76,97 @@ http-retries: 3
 
 # http/webdav协议是否忽略SSL证书验证
 http-ignore-certificate: false
+```
+
+## 管理端 config.yml
+
+```toml
+[core]
+# 要排除的文件规则，格式为正则表达式，暂时不支持Glob表达式
+# 匹配任意一条规则时，文件就会被忽略（忽略，指管理端会当这个文件不存在一般）
+exclude-rules = []
+
+[web]
+# webui的监听地址，通常情况下请保持0.0.0.0不要修改
+listen-addr = "0.0.0.0"
+
+# webui的监听端口，可以调整为其它的端口
+listen-port = 6710
+
+# https的证书文件路径
+tls-cert-file = ""
+
+# https的私钥文件路径
+tls-key-file = ""
+
+# 控制`Access-Control-Allow-Credentials`的值
+cors-allow-credentials = false
+
+# 控制`Access-Control-Allow-Headers`的值
+cors-allow-headers = ["*"]
+
+# 控制`Access-Control-Allow-Methods`的值
+cors-allow-methods = ["*"]
+
+# 控制`Access-Control-Allow-Origin`的值
+cors-allow-origin = ["*"]
+
+# 控制`Access-Control-Allow-Private-Network`的值
+cors-allow-private-network = false
+
+# 控制`Access-Control-Expose-Headers`的值
+cors-expose-headers = ["*"]
+
+# 首页的文件名。用来在访问根目录时展示给用户的页面。一般情况下无需修改
+index_filename = "index.html"
+
+# 遇到文件404时，重定向到哪个文件。主要用于支持前端的SinglePageApplication特性。一般情况下无需修改
+redirect_404 = "index.html"
+
+[builtin-server]
+# 是否启动私有协议服务器功能
+enabled = true
+
+# 私有协议服务器的监听地址，通常情况下请保持0.0.0.0不要修改
+listen-addr = "0.0.0.0"
+
+# 私有协议服务器的监听端口，可以按需调整
+listen-port = 6700
+
+# 内置服务端之限速功能的突发容量，单位为字节，默认为0不开启限速。
+# 如果需要开启可以填写建议值1048576（背后的限速算法为令牌桶）
+capacity = 0
+
+# 内置服务端之限速功能的每秒回复的令牌数，单位为字节，默认为0不开启限速。
+# 如果需要开启，这里填写需要限制的最大速度即可，比如1048576代表单链接限速1mb/s（背后的限速算法为令牌桶）
+regain = 0
+
+[s3]
+# 启用webdav的上传功能
+enabled = true
+
+# 端点地址
+endpoint = "https://cos.ap-nanjing.myqcloud.com"
+
+# 桶名
+bucket = "test-123456789"
+
+# 认证id
+access-id = ""
+
+# 认证key
+secret-key = ""
+
+[webdav]
+# 启用webdav的上传功能
+enabled = true
+
+# 主机部分
+host = ""
+
+# 用户名
+username = ""
+
+# 密码
+password = ""
 ```
