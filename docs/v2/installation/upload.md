@@ -77,17 +77,28 @@ import TabItem from '@theme/TabItem';
     
     将s3下的enabled改为true，打开s3的上传功能。
     
-    s3的配置有4项，端点，桶名，id和key。
+    s3的配置有5项，端点，桶名，地域，id和key。
+    
+    后续教程全部使用virtual-hosted方式进行访问s3，path-like方式已经不受支持。
     
     首先需要配置端点：
     
-    + 腾讯云：`https://cos.<region>.myqcloud.com`（将`<region>`替换成对应的地域即可，比如`ap-guangzhou`）
-    + 阿里云：`https://oss-<resion>.aliyuncs.com`（将`<region>`替换成对应的地域即可，比如`cn-hangzhou`）
+    + 腾讯云：`https://<bucket>.cos.<region>.myqcloud.com`
+      + 将`<bucket>`替换成对应的桶名，比如`examplebucket-123321`  
+      + 将`<region>`替换成对应的地域，比如`ap-guangzhou`
+    + 阿里云：`https://<bucket>.oss-<resion>.aliyuncs.com`
+      + 将`<bucket>`替换成对应的桶名，比如`examplebucket`  
+      + 将`<region>`替换成对应的地域，比如`cn-hangzhou`
 
-    然后需要配置桶名：
+    然后需要配置桶名，虽然端点中已经包含了桶名，但这里仍然需要再填一次。
     
     + 腾讯云：通常格式为`<BucketName-APPID>`，既桶名+APPID
     + 阿里云：格式没有限制
+
+    然后需要配置地域，虽然端点中已经包含了地域，但这里仍然需要再填一次。
+    
+    + 腾讯云：通常格式以ap打头，比如`ap-guangzhou`
+    + 阿里云：通常格式以cn打头，`cn-hangzhou`
     
     最后是id和key，配置好后重新启动管理端即可生效。
     

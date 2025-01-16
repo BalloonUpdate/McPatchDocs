@@ -146,10 +146,13 @@ regain = 0
 enabled = true
 
 # 端点地址
-endpoint = "https://cos.ap-nanjing.myqcloud.com"
+endpoint = "https://test-123456789.cos.ap-nanjing.myqcloud.com"
 
 # 桶名
 bucket = "test-123456789"
+
+# 地域
+region = "ap-nanjing"
 
 # 认证id
 access-id = ""
