@@ -83,14 +83,12 @@ import TabItem from '@theme/TabItem';
     
     首先需要配置端点：
     
-    + 腾讯云：`https://<bucket>.cos.<region>.myqcloud.com`
-      + 将`<bucket>`替换成对应的桶名，比如`examplebucket-123321`  
+    + 腾讯云：`https://cos.<region>.myqcloud.com`
       + 将`<region>`替换成对应的地域，比如`ap-guangzhou`
-    + 阿里云：`https://<bucket>.oss-<resion>.aliyuncs.com`
-      + 将`<bucket>`替换成对应的桶名，比如`examplebucket`  
+    + 阿里云：`https://oss-<resion>.aliyuncs.com`
       + 将`<region>`替换成对应的地域，比如`cn-hangzhou`
 
-    然后需要配置桶名，虽然端点中已经包含了桶名，但这里仍然需要再填一次。
+    然后需要配置桶名。
     
     + 腾讯云：通常格式为`<BucketName-APPID>`，既桶名+APPID
     + 阿里云：格式没有限制
