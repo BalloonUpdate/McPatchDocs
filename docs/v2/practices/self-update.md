@@ -2,6 +2,12 @@
 title: 客户端自更新
 ---
 
+:::warning
+
+此特性仅支持Rust编写的旧版v2客户端，新的Java版客户端暂不支持
+
+:::
+
 McPatch 客户端会不定时发布新版本，新版本一般都会包含新的特性和改进修复，需要尽可能升级到新版本。
 
 但客户端升级不像管理端那么容易：因为客户端在玩家电脑上，升级需要重新发包，比较麻烦。
@@ -38,7 +44,7 @@ mcpatch-client-老版本1.exe
 guanli/
 ├─ workspace/
 │  └─ .minecraft/
-│     └─ gengxin/
+│     └─ mcpatch/
 │        ├─ mcpatch-client-新版本.exe
 │        └─ startlist.txt
 └─ m-0.0.11-x86_64-pc-windows-msvc.exe

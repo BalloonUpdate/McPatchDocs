@@ -4,26 +4,45 @@ title: 安装教程
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## 零、版本号说明
-
-mcpatch v2的版本号分三段：`0`.`1`.`2`。当前两段也就是`0`或者`1`发生变动时，就代表与之前的版本不兼容了。此时就需要同步更新客户端或者管理端了，否则可能出现不兼容的问题。
-
 ## 一、下载文件
 
 安装需要客户端和管理端，可以从这些地方下载：
 
-+ [Github Releases](https://github.com/BalloonUpdate/McPatch2/releases)
++ Github Releases（[管理端](https://github.com/BalloonUpdate/McPatch2/releases)、[新客户端](https://github.com/BalloonUpdate/Mcpatch2JavaClient/releases)、[旧客户端](https://github.com/BalloonUpdate/Mcpatch2RustClient/releases)）
 + [hoshiroko.com](https://mcpatch.hoshiroko.com)（感谢[@薄荷の尾巴提供](https://hoshiroko.com)）
 
 管理端程序的文件名通常叫`mcpatch-manager`或者直接简写为`m`。是用来打更新包和进行日常维护工作的。同时也提供一个内置的开箱即用服务端方便上手。管理端通常上放在自己电脑上，或者服务器上运行。
 
-客户端程序的文件名通常叫`mcpatch-client`或者直接简写为`c`。是用来更新Minecraft客户端的文件的。通常配置好后和Minecraft客户端一起打包发给玩家，以实现远程更新文件的效果。
+客户端会有一些区别，v2版本目前有两个客户端可供选择，一个是exe格式的旧客户端，另一个是jar格式的新客户端。可以使用下面的选项卡来切换不同的使用教程。
+
+两个版本的区别：
+
+1. 旧客户端使用Rust编写，在基于x86的Windows和Linux平台上拥有最好的性能和稳定性，但不支持win7或者其它的操作系统
+2. 新客户端使用Java编写，对提供最大的平台兼容性支持，包括MacOS和手机端。
+
+选择建议：
+
+优先使用新的Java版客户端，如果不能满足需求，可以将旧的Rust版客户端作为备选。
+
+<Tabs groupId="client-edition">
+    <TabItem value="new" label="新客户端" default>
+    客户端程序的文件名通常叫`Mcpatch-xxx.jar`。是用来更新Minecraft客户端的文件的。通常配置好后和Minecraft客户端一起打包发给玩家，以实现远程更新文件的效果。
+
+    </TabItem>
+    <TabItem value="old" label="旧客户端" default>
+    客户端程序的文件名通常叫`mcpatch-client`或者直接简写为`c`。是用来更新Minecraft客户端的文件的。通常配置好后和Minecraft客户端一起打包发给玩家，以实现远程更新文件的效果。
 
 :::tip
 
-如果提示找不到 VCRUNTIME140.dll 文件，说明需要 [安装 VC++ 2015 运行库](../faq.md#由于找不到VCRUNTIME140.dll，无法继续执行代码)。
+    如果提示找不到 VCRUNTIME140.dll 文件，说明需要 [安装 VC++ 2015 运行库](../faq.md#由于找不到VCRUNTIME140.dll，无法继续执行代码)。
 
 :::
+    </TabItem>
+</Tabs>
+
+
+
+
 
 ## 二、配置管理端
 
@@ -35,17 +54,23 @@ mcpatch v2的版本号分三段：`0`.`1`.`2`。当前两段也就是`0`或者`1
 
 首先在桌面上（或者任何你喜欢的地方）创建一个目录，叫`guanli`。然后将刚刚下载好的管理端程序放进去。
 
-如果你是从命令行版本的管理端升级到webui版本的管理端，请删除config.toml文件重新生成，否则webui版本的管理端可能无法正常工作。
+不同版本的管理端支持不同的运行模式，具体请参考下表：
+
++ 管理端 0.0.x：仅支持命令行模式
++ 管理端 0.1.x - 2.0.2：仅支持WebUI模式
++ 管理端 2.0.3 - 未来版本：支持命令行和WebUI模式
+
+注：从`0.0.x`升级到更高版本需要删除一下config.toml文件重新生成，否则程序无法启动
 
 <Tabs groupId="manager-edition">
-    <TabItem value="cmd" label="命令行版本" default>
+    <TabItem value="cmd" label="命令行模式" default>
     双击即可启动管理端。启动成功后可以看到有`> `的字样，此时进入了交互式命令行模式。按回车就可以出现管理端支持的命令列表。
 
     我们输出`check`命令按下回车键，它会提示修改的文件数量为多少多少，我们先忽视这个消息。
     </TabItem>
     
-    <TabItem value="webui" label="WebUI版本">
-    双击即可启动管理端。
+    <TabItem value="webui" label="WebUI模式">
+    双击即可启动管理端。如果启动成功后你看到有`> `的字样，说明进入了命令行模式，只需要输入`webui`再按Enter键就能进入webui模式。（或者直接使用启动参数`m.exe webui`来直接进入webui模式，管理端是支持指令预填写的）
     
     启动成功之后，会自动创建配置文件和生成一组默认的账号密码。我们需要复制密码到安全的地方妥善保存，因为密码只会显示一次。
     
@@ -60,7 +85,7 @@ mcpatch v2的版本号分三段：`0`.`1`.`2`。当前两段也就是`0`或者`1
 此时，`guanli`目录大概长这样：
 
 <Tabs groupId="manager-edition">
-    <TabItem value="cmd" label="命令行版本" default>
+    <TabItem value="cmd" label="命令行模式" default>
     ```
     guanli/
     ├─ workspace/                           # 工作空间目录
@@ -68,7 +93,7 @@ mcpatch v2的版本号分三段：`0`.`1`.`2`。当前两段也就是`0`或者`1
     └─ m-0.0.11-x86_64-pc-windows-msvc.exe  # 管理端程序
     ```
     </TabItem>
-    <TabItem value="webui" label="WebUI版本" default>
+    <TabItem value="webui" label="WebUI模式" default>
     ```
     guanli/
     ├─ workspace/       # 工作空间目录
@@ -197,7 +222,7 @@ mcpatch v2的版本号分三段：`0`.`1`.`2`。当前两段也就是`0`或者`1
 ## 四、打包
 
 <Tabs groupId="manager-edition">
-    <TabItem value="cmd" label="命令行版本" default>
+    <TabItem value="cmd" label="命令行模式" default>
     切回管理端窗口。（如果你已经退出了，那么再次双击运行即可）
 
     看到`> `的字样后。输入`pack <version>`即可开始打包，`<version>`是要打包的版本号，不能和现有的重复。
@@ -212,7 +237,7 @@ mcpatch v2的版本号分三段：`0`.`1`.`2`。当前两段也就是`0`或者`1
 
     看到“打包完成！”的字样即代表打包成功了，更新包会存放在public目录下，会按版本号进行命名。
     </TabItem>
-    <TabItem value="webui" label="WebUI版本" default>
+    <TabItem value="webui" label="WebUI模式" default>
     点击左侧菜单切换到终端界面。
     
     点击“打包新版本”按钮，输入版本号和更新记录即可。
@@ -235,10 +260,10 @@ guanli/
 ```
 
 <Tabs groupId="manager-edition">
-    <TabItem value="cmd" label="命令行版本" default>
+    <TabItem value="cmd" label="命令行模式" default>
     如果对打包结果不放心，可以使用`test`对更新包进行校验，这会模拟客户端的解压过程，检查文件是否损坏。
     </TabItem>
-    <TabItem value="webui" label="WebUI版本" default>
+    <TabItem value="webui" label="WebUI模式" default>
     如果对打包结果不放心，可以点击“测试更新包”按钮对更新包进行校验，这会模拟客户端的解压过程，检查文件是否损坏。
     </TabItem>
 </Tabs>
@@ -256,10 +281,10 @@ guanli/
 后续的文件维护很简单！直接对工作空间目录下的文件或者目录进行增加，删除，修改替换，移动，重命名都可。想怎么操作怎么操作。
 
 <Tabs groupId="manager-edition">
-    <TabItem value="cmd" label="命令行版本" default>
+    <TabItem value="cmd" label="命令行模式" default>
     修改到自己满意为止后，完后输入`pack <version>`打包即可。
     </TabItem>
-    <TabItem value="webui" label="WebUI版本" default>
+    <TabItem value="webui" label="WebUI模式" default>
     修改到自己满意为止后，点击“打包新版本”按钮即可。
     </TabItem>
 </Tabs>
@@ -269,10 +294,10 @@ guanli/
 
 
 <Tabs groupId="manager-edition">
-    <TabItem value="cmd" label="命令行版本" default>
+    <TabItem value="cmd" label="命令行模式" default>
     如果对工作空间目录下的文件进行了修改，但又发现改的不对。可以使用管理端的`revert`命令来丢弃刚刚的修改，将文件状态退回上一次打包的时候。
     </TabItem>
-    <TabItem value="webui" label="WebUI版本" default>
+    <TabItem value="webui" label="WebUI模式" default>
     如果对工作空间目录下的文件进行了修改，但又发现改的不对。可以点击“回退工作空间”按钮来丢弃刚刚的修改，将文件状态退回上一次打包的时候。
     </TabItem>
 </Tabs>
@@ -311,11 +336,11 @@ guanli/
 管理端自带的服务端使用私有协议，这是mcpatch自己基于tcp设计的一套文件传输协议。相较HTTP协议的优点是配置难度低和免备案即可使用。其开箱即用的特性，非常适合小服使用或者本地测试。
 
 <Tabs groupId="manager-edition">
-    <TabItem value="cmd" label="命令行版本" default>
+    <TabItem value="cmd" label="命令行模式" default>
     要启动管理端自带的服务端功能，首先需要启动管理端，然后输入`serve`按回车即可启动。（注意命令是`serve`不是`server`不要打错）
 
-    默认的端口是6700，如果需要调整，可用修改管理端的配置文件`config.toml`中的`serve-listen-port`字段。
-    
+    默认的端口是6700，如果需要调整，可用修改管理端的配置文件`config.toml`中的`[builtin-server].listen-port`或者`serve-listen-port`字段。
+
     想要关闭服务端可以叉掉终端的窗口，或者按Ctrl + C即可。
     
     管理端一般都是同时开两个管理端进程实例，一个打包用，用完叉掉。一个跑内置服务端，一直挂在后台
@@ -333,10 +358,16 @@ guanli/
     <mcpatch-manager> serve
     ```
     </TabItem>
-    <TabItem value="webui" label="WebUI版本" default>
+    <TabItem value="webui" label="WebUI模式" default>
     WebUI版本默认会自动启动私有协议服务端，监听端口为6700，默认情况下无需手动开启，可以直接使用。
     </TabItem>
 </Tabs>
+
+:::warning
+
+注意配置文件中的所有`listen-addr`参数请勿随意调整，应该始终保持`0.0.0.0`，否则会导致所有连接都连不上（除非你很清楚监听地址的功能是什么）
+
+:::
 
 如果需要在内网穿透环境下使用管理端自带的服务端功能，协议记得选择TCP协议。
 
@@ -350,7 +381,7 @@ guanli/
 
 :::
 
-将客户端程序放到Minecraft客户端的`.minecraft/gengxin`目录里面（需要手动创建），然后直接双击运行exe。
+将客户端程序放到Minecraft客户端的`.minecraft/mcpatch`目录里面（需要手动创建），然后直接双击运行exe。
 
 不出意外的话，客户端会报错无法连接之类的错误，不用管这个报错，直接关掉。
 
@@ -370,51 +401,74 @@ guanli/
 
 客户端每次都要手动双击运行很是麻烦，可以借助一些方法在游戏启动时自动进行更新。
 
-首先到[BalloonUpdate/McPatch2Loader](https://github.com/BalloonUpdate/McPatch2Loader/releases)下载最新版的加载器文件。
+<Tabs groupId="client-edition">
+    <TabItem value="new" label="新客户端" default>
 
-打开Minecraft客户端的`.minecraft/gengxin`目录。将加载器放在里面，和客户端程序放到一起。
+    打开Minecraft客户端的`.minecraft/mcpatch`目录。将客户端jar文件移动到里面去。（记得把配置文件和版本号文件也一起移动）
 
-在此处创建“启动列表”文件，叫`startlist.txt`。
+    打开Minecraft启动器（任意启动器均可，官方启动器除外），调整游戏版本设置，找到Java虚拟机参数（或者叫JVM 参数）。
 
-将客户端程序的文件名复制，比如`mcpatch-client-0.0.0.exe`。粘贴到`startlist.txt`里，保存关闭。
+    在参数的开头插入这串代码`-javaagent:mcpatch/《举个栗子》.jar `（注意.jar的后面还有个空格也不要漏），然后回到启动器主界面。
 
-此时，目录结构大概长这样。
-```
-客户端整合包/
-├─ .minecraft/
-│  ├─ gengxin/
-│  │  ├─ mcpatch-client-0.0.0.exe
-│  │  ├─ startlist.txt
-│  │  ├─ loader-2.jar
-│  │  ├─ mcpatch.yml
-│  │  └─ mcpatch.log
-│  └─ versions/
-└─ PCL启动器.exe
-```
+    `《举个栗子》`要换成客户端程序的实际文件名，这里只是举例，下文同理。
 
-打开Minecraft启动器（任意启动器均可，官方启动器除外），调整游戏版本设置，找到Java虚拟机参数（或者JVM 参数）。
+    </TabItem>
+    <TabItem value="old" label="旧客户端" default>
 
-在参数的开头插入这串代码`-javaagent:gengxin/《举个栗子》.jar `（注意.jar的后面还有个空格也不要漏），然后回到启动器主界面。
+    首先到[BalloonUpdate/McPatch2Loader](https://github.com/BalloonUpdate/McPatch2Loader/releases)下载最新版的加载器文件。
 
-`《举个栗子》`要换成loader.jar的实际文件名，这里只是举例，下文同理。
+    打开Minecraft客户端的`.minecraft/mcpatch`目录。将加载器放在里面，和客户端程序放到一起。
+
+    在此处创建“启动列表”文件，叫`startlist.txt`。
+
+    将客户端程序的文件名复制，比如`mcpatch-client-0.0.0.exe`。粘贴到`startlist.txt`里，保存关闭。
+
+    此时，目录结构大概长这样。
+    ```
+    客户端整合包/
+    ├─ .minecraft/
+    │  ├─ mcpatch/
+    │  │  ├─ mcpatch-client-0.0.0.exe
+    │  │  ├─ startlist.txt
+    │  │  ├─ loader-2.jar
+    │  │  ├─ mcpatch.yml
+    │  │  └─ mcpatch.log
+    │  └─ versions/
+    └─ PCL启动器.exe
+    ```
+
+    打开Minecraft启动器（任意启动器均可，官方启动器除外），调整游戏版本设置，找到Java虚拟机参数（或者JVM 参数）。
+
+    在参数的开头插入这串代码`-javaagent:mcpatch/《举个栗子》.jar `（注意.jar的后面还有个空格也不要漏），然后回到启动器主界面。
+
+    `《举个栗子》`要换成loader.jar的实际文件名，这里只是举例，下文同理。
+
+    </TabItem>
+</Tabs>
+
+:::info
+
+如果你发现启动器有`JVM参数头`或者`JVM参数尾`这两个选项，则需要填到`JVM参数头`的最前面，最前面！
+
+:::
 
 点击Minecraft启动器的“启动游戏”按钮，一切顺利的话，在启动Minecraft主窗口之前，就会启动更新了。
 
 如果启动游戏失败，且日志里有`Error opening zip file or JAR manifest missing`的字样，说明填写的jar文件找不到。
 
-你可能会好奇，明明这个文件在`gengxin`目录下面，怎么就会找不到呢？
+你可能会好奇，明明这个文件在`mcpatch`目录下面，怎么就会找不到呢？
 
 这个问题其实不怪你，它通常和MC游戏的启动设置有关，其中影响最明显的就是版本隔离选项！
 
-一般不开版本隔离功能时，使用`-javaagent:gengxin/《举个栗子》.jar `就可以顺利启动，但是开启版本隔离后就不行了。
+一般不开版本隔离功能时，使用`-javaagent:mcpatch/《举个栗子》.jar `就可以顺利启动，但是开启版本隔离后就不行了。
 
-这是因为开启版本隔离后，javaagent参数的判定路径（也就是工作目录）会发生改变。没开启时，是从.minecraft目录下开始计算，这也是为什么loader明明放在`.minecraft/gengxin`下，但参数里却只需要填写`gengxin/《举个栗子》.jar`，而不需要加上`.minecraft`的原因。
+这是因为开启版本隔离后，javaagent参数的判定路径（也就是工作目录）会发生改变。没开启时，是从.minecraft目录下开始计算，这也是为什么明明放在`.minecraft/mcpatch`下，但参数里却只需要填写`mcpatch/《举个栗子》.jar`，而不需要加上`.minecraft`的原因。
 
 当开启版本隔离后，这个判定路径多数情况下都会变成从`.minecraft/version/xxxx/`目录下开始计算。
 
-此时将参数改成`-javaagent:../../gengxin/《举个栗子》.jar `通常就可以正常启动了。其中`../`表示返回上级目录，可以不断连用来多次返回上级目录。
+此时将参数改成`-javaagent:../../mcpatch/《举个栗子》.jar `通常就可以正常启动了。其中`../`表示返回上级目录，可以不断连用来多次返回上级目录。
 
-从版本文件夹`.minecraft/version/xxxx/`开始，两个`../`正好抵消掉`version/xxxx/`，使其判定路径变成`.minecraft/`，那么再加上`gengxin/《举个栗子》.jar`，就正好能定位到loader的实际位置了，游戏便可以正常启动了。
+从版本文件夹`.minecraft/version/xxxx/`开始，两个`../`正好抵消掉`version/xxxx/`，使其判定路径变成`.minecraft/`，那么再加上`mcpatch/《举个栗子》.jar`，就正好能定位到loader的实际位置了，游戏便可以正常启动了。
 
 ## 九、经常被问到的问题
 

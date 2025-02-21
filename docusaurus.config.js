@@ -150,7 +150,15 @@ const config = {
             title: 'V2版本',
             items: [
               {
-                label: '管理端 & 客户端',
+                label: '新客户端',
+                href: 'https://github.com/BalloonUpdate/Mcpatch2JavaClient',
+              },
+              {
+                label: '旧客户端',
+                href: 'https://github.com/BalloonUpdate/Mcpatch2RustClient',
+              },
+              {
+                label: '管理端',
                 href: 'https://github.com/BalloonUpdate/McPatch2',
               },
               {
