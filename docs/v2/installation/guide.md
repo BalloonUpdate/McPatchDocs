@@ -8,28 +8,28 @@ import TabItem from '@theme/TabItem';
 
 安装需要客户端和管理端，可以从这些地方下载：
 
-+ Github Releases（[管理端](https://github.com/BalloonUpdate/McPatch2/releases)、[新客户端](https://github.com/BalloonUpdate/Mcpatch2JavaClient/releases)、[旧客户端](https://github.com/BalloonUpdate/Mcpatch2RustClient/releases)）
++ Github Releases（[管理端](https://github.com/BalloonUpdate/McPatch2/releases)、[jar客户端](https://github.com/BalloonUpdate/Mcpatch2JavaClient/releases)、[exe客户端](https://github.com/BalloonUpdate/Mcpatch2RustClient/releases)）
 + [hoshiroko.com](https://mcpatch.hoshiroko.com)（感谢[@薄荷の尾巴提供](https://hoshiroko.com)）
 
 管理端程序的文件名通常叫`mcpatch-manager`或者直接简写为`m`。是用来打更新包和进行日常维护工作的。同时也提供一个内置的开箱即用服务端方便上手。管理端通常上放在自己电脑上，或者服务器上运行。
 
-客户端会有一些区别，v2版本目前有两个客户端可供选择，一个是exe格式的旧客户端，另一个是jar格式的新客户端。可以使用下面的选项卡来切换不同的使用教程。
+客户端会有一些区别，v2版本目前有两个客户端可供选择，一个是exe格式的客户端，另一个是jar格式的客户端。可以使用下面的选项卡来切换不同的使用教程。
 
 两个版本的区别：
 
-1. 旧客户端使用Rust编写，在基于x86的Windows和Linux平台上拥有最好的性能和稳定性，但不支持win7或者其它的操作系统
-2. 新客户端使用Java编写，对提供最大的平台兼容性支持，包括MacOS和手机端。
+1. exe客户端使用Rust编写，在基于x86的Windows和Linux平台上拥有最好的性能和稳定性，但不支持win7或者其它的操作系统
+2. jar客户端使用Java编写，支持在多平台上运行，比如LinuxArm，Windows7等（macos和手机端部分支持）
 
 选择建议：
 
-优先使用新的Java版客户端，如果不能满足需求，可以将旧的Rust版客户端作为备选。
+优先选择exe客户端，如果不能满足需求，使用jar客户端作为备选。
 
 <Tabs groupId="client-edition">
-    <TabItem value="new" label="新客户端" default>
+    <TabItem value="new" label="jar客户端" default>
     客户端程序的文件名通常叫`Mcpatch-xxx.jar`。是用来更新Minecraft客户端的文件的。通常配置好后和Minecraft客户端一起打包发给玩家，以实现远程更新文件的效果。
 
     </TabItem>
-    <TabItem value="old" label="旧客户端" default>
+    <TabItem value="old" label="exe客户端" default>
     客户端程序的文件名通常叫`mcpatch-client`或者直接简写为`c`。是用来更新Minecraft客户端的文件的。通常配置好后和Minecraft客户端一起打包发给玩家，以实现远程更新文件的效果。
 
 :::tip
@@ -402,7 +402,7 @@ guanli/
 客户端每次都要手动双击运行很是麻烦，可以借助一些方法在游戏启动时自动进行更新。
 
 <Tabs groupId="client-edition">
-    <TabItem value="new" label="新客户端" default>
+    <TabItem value="new" label="jar客户端" default>
 
     打开Minecraft客户端的`.minecraft/mcpatch`目录。将客户端jar文件移动到里面去。（记得把配置文件和版本号文件也一起移动）
 
@@ -413,7 +413,7 @@ guanli/
     `《举个栗子》`要换成客户端程序的实际文件名，这里只是举例，下文同理。
 
     </TabItem>
-    <TabItem value="old" label="旧客户端" default>
+    <TabItem value="old" label="exe客户端" default>
 
     首先到[BalloonUpdate/McPatch2Loader](https://github.com/BalloonUpdate/McPatch2Loader/releases)下载最新版的加载器文件。
 
