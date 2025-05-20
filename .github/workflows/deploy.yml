@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 5 * * *'  # runs on every 05:00
+  # schedule:
+  #   - cron: '0 5 * * *'  # runs on every 05:00
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
